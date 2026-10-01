@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Onystic Lumière – Aperçu de la charte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ EN-TÊTE ============ -->
+<header class="entete">
+  <div class="conteneur entete__interieur">
+    <a class="logo" href="#haut" style="font-family:var(--police-titre);font-size:2.2rem;color:var(--brun);line-height:1">Onystic Lumière</a>
+    <button class="nav__bouton" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <nav class="nav" id="menu" aria-label="Menu principal">
+      <ul>
+        <li><a href="#haut" aria-current="page">Accueil</a></li>
+        <li class="nav__item--deroulant">
+          <a href="#services">Services</a>
+          <ul class="nav__sous-menu">
+            <li><a href="#services">Communication animale</a></li>
+            <li><a href="#services">Cartomancie</a></li>
+            <li><a href="#services">Soins énergétiques</a></li>
+          </ul>
+        </li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="btn btn--rdv btn--petit" href="#contact">Prendre rendez-vous</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="haut">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="conteneur">
+    <h1>Onystic Lumière</h1>
+    <p class="slogan">Un accompagnement doux pour le cœur et l’âme</p>
+    <a class="btn btn--rdv" href="#contact">Prendre rendez-vous</a>
+    <a class="btn btn--contour" href="#services">Découvrir mes services</a>
+  </div>
+</section>
+
+<!-- ============ PALETTE (aperçu de la charte) ============ -->
+<section class="section">
+  <div class="conteneur">
+    <div class="section__entete">
+      <h2>La palette</h2>
+      <p>Les cinq couleurs de la charte, et les deux nuances de fond ajoutées.</p>
+    </div>
+    <div class="grille" style="grid-template-columns:repeat(auto-fit,minmax(130px,1fr));text-align:center">
+      <div><div style="height:90px;border-radius:var(--rayon-m);background:var(--brun)"></div><p class="mb-0 mt-s"><strong>--brun</strong><br>#66412b</p></div>
+      <div><div style="height:90px;border-radius:var(--rayon-m);background:var(--peche)"></div><p class="mb-0 mt-s"><strong>--peche</strong><br>#eecbae</p></div>
+      <div><div style="height:90px;border-radius:var(--rayon-m);background:var(--caramel)"></div><p class="mb-0 mt-s"><strong>--caramel</strong><br>#d09064</p></div>
+      <div><div style="height:90px;border-radius:var(--rayon-m);background:var(--olive)"></div><p class="mb-0 mt-s"><strong>--olive</strong><br>#899a41</p></div>
+      <div><div style="height:90px;border-radius:var(--rayon-m);background:var(--orange)"></div><p class="mb-0 mt-s"><strong>--orange</strong><br>#cb6e3a</p></div>
+      <div><div style="height:90px;border-radius:var(--rayon-m);background:var(--fond);border:1px solid var(--peche)"></div><p class="mb-0 mt-s"><strong>--fond</strong><br>#fcf6ef</p></div>
+      <div><div style="height:90px;border-radius:var(--rayon-m);background:var(--fond-doux)"></div><p class="mb-0 mt-s"><strong>--fond-doux</strong><br>#f6e4d3</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TYPOGRAPHIE ============ -->
+<section class="section section--douce">
+  <div class="conteneur">
+    <div class="duo">
+      <div>
+        <h1 style="font-size:var(--taille-h2)">Titre h1 – Great Vibes</h1>
+        <h2>Titre h2 – Great Vibes</h2>
+        <h3>Titre h3 – Cormorant Garamond</h3>
+        <h4>Titre h4 – Cormorant Garamond</h4>
+      </div>
+      <div>
+        <p>Voici un paragraphe de texte courant en Cormorant Garamond. Il accompagne les visiteurs avec douceur, avec une <a href="#haut">lien cliquable</a> et une interligne confortable pour la lecture.</p>
+        <p class="slogan">Texte en italique pour les slogans et citations.</p>
+        <ul>
+          <li>Liste avec puces vertes</li>
+          <li>Seconde ligne de la liste</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOUTONS ============ -->
+<section class="section">
+  <div class="conteneur centre">
+    <h2>Les boutons</h2>
+    <p class="mb-0">
+      <a class="btn" href="#haut">Bouton principal</a>
+      <a class="btn btn--rdv" href="#haut">Prendre rendez-vous</a>
+      <a class="btn btn--contour" href="#haut">Bouton discret</a>
+      <a class="btn btn--petit" href="#haut">Petit bouton</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ SERVICES (cartes) ============ -->
+<section class="section section--douce" id="services">
+  <div class="conteneur">
+    <div class="section__entete">
+      <h2>Mes accompagnements</h2>
+      <p>Chaque service a sa page, avec « C’est quoi ? », « Comment ça fonctionne ? » et « Tarifs ».</p>
+    </div>
+    <div class="grille">
+      <article class="carte">
+        <div class="carte__image" style="background:var(--caramel)" role="img" aria-label="Emplacement photo"></div>
+        <div class="carte__contenu">
+          <span class="etiquette">Animaux</span>
+          <h3>Communication animale</h3>
+          <p>Un échange en douceur avec votre compagnon, présent ou à distance.</p>
+          <a class="btn btn--petit" href="#haut">En savoir plus</a>
+        </div>
+      </article>
+      <article class="carte">
+        <div class="carte__image" style="background:var(--olive)" role="img" aria-label="Emplacement photo"></div>
+        <div class="carte__contenu">
+          <span class="etiquette">Guidance</span>
+          <h3>Cartomancie</h3>
+          <p>Des cartes pour éclairer une question, un choix, un moment de vie.</p>
+          <a class="btn btn--petit" href="#haut">En savoir plus</a>
+        </div>
+      </article>
+      <article class="carte">
+        <div class="carte__image" style="background:var(--orange)" role="img" aria-label="Emplacement photo"></div>
+        <div class="carte__contenu">
+          <span class="etiquette">Bien-être</span>
+          <h3>Soins énergétiques</h3>
+          <p>Un temps de pause pour se recentrer et apaiser le corps et l’esprit.</p>
+          <a class="btn btn--petit" href="#haut">En savoir plus</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TARIFS ============ -->
+<section class="section">
+  <div class="conteneur">
+    <div class="section__entete"><h2>Les tarifs</h2></div>
+    <div class="grille">
+      <div class="tarif">
+        <h3>Séance à distance</h3>
+        <div class="tarif__prix">00 €</div>
+        <div class="tarif__duree">environ 45 minutes</div>
+        <a class="btn btn--petit" href="#contact">Réserver</a>
+      </div>
+      <div class="tarif">
+        <h3>Séance à domicile</h3>
+        <div class="tarif__prix">00 €</div>
+        <div class="tarif__duree">environ 1 heure</div>
+        <a class="btn btn--petit" href="#contact">Réserver</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AVIS ============ -->
+<section class="section section--douce">
+  <div class="conteneur">
+    <div class="section__entete"><h2>Ils en parlent</h2></div>
+    <div class="grille">
+      <blockquote class="avis">
+        <p class="avis__texte">Un moment très doux, mon chien semblait vraiment apaisé après la séance.</p>
+        <p class="avis__auteur">Prénom<span class="avis__animal">avec Nom de l’animal</span></p>
+      </blockquote>
+      <blockquote class="avis">
+        <p class="avis__texte">Une écoute sincère et bienveillante. Je recommande sans hésiter.</p>
+        <p class="avis__auteur">Prénom<span class="avis__animal">avec Nom de l’animal</span></p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ À PROPOS (duo texte/image + encadré) ============ -->
+<section class="section" id="apropos">
+  <div class="conteneur">
+    <div class="duo">
+      <div style="aspect-ratio:4/3;border-radius:var(--rayon-m);background:var(--peche);box-shadow:var(--ombre)" role="img" aria-label="Emplacement photo"></div>
+      <div>
+        <h2>Qui je suis</h2>
+        <p>Ici, quelques lignes sur le parcours, la façon de travailler et ce qui a donné envie de faire ce métier.</p>
+        <div class="encadre">
+          <p>Ces pratiques sont des approches complémentaires. Elles ne remplacent pas l’avis d’un vétérinaire ou d’un médecin.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section section--douce" id="faq">
+  <div class="conteneur">
+    <div class="section__entete"><h2>Questions fréquentes</h2></div>
+    <div class="faq">
+      <details open>
+        <summary>Mon animal doit-il être présent ?</summary>
+        <p>Non, la séance peut se faire à distance à partir d’une photo.</p>
+      </details>
+      <details>
+        <summary>Peut-on communiquer avec un animal décédé ?</summary>
+        <p>Oui, c’est une demande fréquente. Elle se déroule avec beaucoup de délicatesse.</p>
+      </details>
+      <details>
+        <summary>Comment se déroule une séance ?</summary>
+        <p>Un court échange avant, la séance, puis un compte rendu.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="conteneur">
+    <div class="section__entete"><h2>Me contacter</h2></div>
+    <form class="formulaire" onsubmit="return false" style="margin-inline:auto">
+      <div><label for="nom">Votre prénom</label><input id="nom" type="text"></div>
+      <div><label for="mail">Votre email</label><input id="mail" type="email"></div>
+      <div><label for="service">Service souhaité</label>
+        <select id="service"><option>Communication animale</option><option>Cartomancie</option><option>Soins énergétiques</option></select>
+      </div>
+      <div><label for="msg">Votre message</label><textarea id="msg"></textarea></div>
+      <button class="btn btn--rdv" type="button">Envoyer</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ BANDEAU RDV ============ -->
+<section class="section section--sombre bandeau-rdv">
+  <div class="conteneur">
+    <h2>Prêt(e) à faire le premier pas ?</h2>
+    <p>Choisissez le créneau qui vous convient.</p>
+    <a class="btn btn--rdv" href="#contact">Prendre rendez-vous</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ PIED DE PAGE ============ -->
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied__colonnes">
+      <div><h3>Onystic Lumière</h3><p>Un accompagnement doux pour le cœur et l’âme.</p></div>
+      <div><h3>Services</h3><ul><li><a href="#services">Communication animale</a></li><li><a href="#services">Cartomancie</a></li><li><a href="#services">Soins énergétiques</a></li></ul></div>
+      <div><h3>Infos</h3><ul><li><a href="#faq">FAQ</a></li><li><a href="#haut">Mentions légales</a></li></ul></div>
+    </div>
+    <p class="pied__legal mb-0" style="max-width:none">© Onystic Lumière</p>
+  </div>
+</footer>
+
+<script>
+  // Menu mobile : ouvre / ferme au clic sur le bouton ☰
+  const bouton = document.querySelector('.nav__bouton');
+  const menu = document.getElementById('menu');
+  bouton.addEventListener('click', () => {
+    const ouvert = menu.classList.toggle('ouvert');
+    bouton.setAttribute('aria-expanded', ouvert);
+  });
+</script>
+</body>
+</html>
