@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cartomancie – Onystic Lumière</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="entete">
+    <div class="conteneur entete__interieur">
+      <a class="logo" href="index.html" aria-label="Aller à l'accueil">
+        <img src="logo.png" alt="Logo Onystic Lumière" style="height:50px; margin-right:10px;">
+        <span style="font-family:var(--police-titre);font-size:2.2rem;color:var(--brun);line-height:1">Onystic Lumière</span>
+      </a>
+      <button class="nav__bouton" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+      <nav class="nav" id="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="avancement.html">Avancement</a></li>
+          <li class="nav__item--deroulant">
+            <a href="index.html#services" aria-current="page">Services</a>
+            <ul class="nav__sous-menu">
+              <li><a href="communication-animale.html">Communication animale</a></li>
+              <li><a href="soins-energetiques.html">Soins énergétiques</a></li>
+              <li><a href="cartomancie.html">Cartomancie</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#apropos">À propos</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a class="btn btn--rdv btn--petit" href="index.html#contact">Prendre rendez-vous</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--page" style="background-image: url('photop.png');">
+      <div class="conteneur">
+        <h1>Cartomancie</h1>
+        <p class="slogan">Un guide doux pour éclairer le chemin, avec calme et bienveillance.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="conteneur duo">
+        <div>
+          <h2>Une lecture douce et lumineuse</h2>
+          <p>La cartomancie peut être un outil de guidance pour prendre du recul, éclairer une situation et retrouver un point de vue plus apaisé sur une étape de vie.</p>
+          <p>Dans un cadre bienveillant, elle permet de mettre des mots sur ce que vous sentez, de clarifier des questions, et d’offrir un regard plus juste sur le chemin à suivre.</p>
+          <div class="encadre mt-m">
+            <p><strong>Approche :</strong> la cartomancie n’est pas une prédiction figée, mais un outil d’accompagnement, de réflexion et d’orientation.</p>
+          </div>
+        </div>
+        <img src="carto.png" alt="Illustration cartomancie" style="border-radius:var(--rayon-m); box-shadow:var(--ombre);">
+      </div>
+    </section>
+
+    <section class="section section--douce">
+      <div class="conteneur">
+        <div class="section__entete">
+          <h2>Ce que la carte peut révéler</h2>
+        </div>
+        <div class="grille grille--2">
+          <article class="carte">
+            <div class="carte__contenu">
+              <span class="etiquette">Choix</span>
+              <h3>Des réponses claires</h3>
+              <p>Pour mieux comprendre une décision, un doute ou un tournant de vie.</p>
+            </div>
+          </article>
+          <article class="carte">
+            <div class="carte__contenu">
+              <span class="etiquette">Énergie</span>
+              <h3>Une lecture émotionnelle</h3>
+              <p>Pour identifier ce qui pèse, ce qui soutient et ce qui mérite votre attention.</p>
+            </div>
+          </article>
+          <article class="carte">
+            <div class="carte__contenu">
+              <span class="etiquette">Orientation</span>
+              <h3>Un repère</h3>
+              <p>Pour avancer plus sereinement avec un regard plus lumineux sur votre chemin.</p>
+            </div>
+          </article>
+          <article class="carte">
+            <div class="carte__contenu">
+              <span class="etiquette">Conscience</span>
+              <h3>Un espace de réflexion</h3>
+              <p>Pour prendre du recul et intégrer une perspective plus juste et plus douce.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="conteneur">
+        <div class="section__entete">
+          <h2>Quand solliciter une lecture ?</h2>
+        </div>
+        <div class="grille">
+          <div class="tarif">
+            <h3>En période de doute</h3>
+            <p>Quand une décision ou une étape nécessite davantage de clarté.</p>
+          </div>
+          <div class="tarif">
+            <h3>En transition</h3>
+            <p>Lors d’un changement de vie, d’un projet ou d’un besoin de repères.</p>
+          </div>
+          <div class="tarif">
+            <h3>Pour une guidance douce</h3>
+            <p>Quand vous cherchez un éclairage bienveillant pour avancer en confiance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--sombre bandeau-rdv">
+      <div class="conteneur">
+        <h2>Vous avez besoin d’un éclairage pour avancer ?</h2>
+        <p>Je vous accompagne avec bienveillance pour retrouver des repères, de la clarté et de la paix intérieure.</p>
+        <a class="btn btn--rdv" href="index.html#contact">Prendre rendez-vous</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur">
+      <div class="pied__colonnes">
+        <div>
+          <h3>Onystic Lumière</h3>
+          <p>Un accompagnement doux pour le cœur et l’âme.</p>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="communication-animale.html">Communication animale</a></li>
+            <li><a href="soins-energetiques.html">Soins énergétiques</a></li>
+            <li><a href="cartomancie.html">Cartomancie</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="pied__legal mb-0" style="max-width:none">© Onystic Lumière – Site créé avec douceur et bienveillance</p>
+    </div>
+  </footer>
+
+  <script>
+    const bouton = document.querySelector('.nav__bouton');
+    const menu = document.getElementById('menu');
+    bouton.addEventListener('click', () => {
+      const ouvert = menu.classList.toggle('ouvert');
+      bouton.setAttribute('aria-expanded', ouvert);
+    });
+  </script>
+</body>
+</html>
