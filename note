@@ -1,0 +1,15 @@
+📌 TO-DO LIST — ONYSTIC LUMIÈRE
+
+[ ] Créer le Planning de rendez-vous dans le Google Agenda de Marine (durées + créneaux).
+[ ] Copier le code d'intégration (<iframe>) ou le lien du planning Google Agenda.
+[ ] prestations.html : Lier les boutons vers la page de réservation.
+[ ] tarifs.html : Vérifier les prix et ajuster les liens des boutons.
+[ ] contact.html : Vérifier l'envoi du formulaire et les liens réseaux sociaux.
+[ ] Tester le rendu sur mobile et ordinateur.
+[ ] Vérifier que les avis s'affichent correctement en cartes blanches avec lisière olive.
+[ ] Tester la réservation d'un créneau test sur le Google Agenda.
+[ ] Lancer git add .
+[ ] Lancer git commit -m "Mise à jour complète et intégration réservation"
+[ ] Lancer git push origin main
+[ ] Vérifier la mise en ligne sur le site public.
+[ ] Connecter automatiquement Google Sheets au carrousel du site pour importer les avis reçus.
