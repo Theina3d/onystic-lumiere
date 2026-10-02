@@ -56,6 +56,27 @@
   </div>
 </section>
 
+
+
+<!-- ============ À PROPOS ============ -->
+<section class="section" id="apropos">
+  <div class="conteneur">
+    <div class="duo">
+      <img src="photop.png" alt="Photo de Marine" style="border-radius:var(--rayon-m); box-shadow:var(--ombre); width:100%; height:auto;">
+      <div>
+        <h2>Qui je suis</h2>
+        <p>Depuis toujours, les animaux occupent une place essentielle dans ma vie. J'ai créé <strong>Onystic Lumière</strong> avec l'envie profonde d'offrir un espace où chacun peut nourrir le lien si précieux qui l'unit aux êtres qui partagent son quotidien.</p>
+        <p>Après une formation de 9 mois en communication animale et soins énergétiques holistiques, je mets ma sensibilité au service d'un accompagnement doux, respectueux et bienveillant.</p>
+        
+        <div class="encadre mt-s">
+          <p><strong>Note importante :</strong> Mes accompagnements sont des approches complémentaires qui visent le bien-être et ne remplacent en aucun cas un avis ou suivi vétérinaire/médical.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ============ SERVICES ============ -->
 <section class="section section--douce" id="services">
   <div class="conteneur">
@@ -102,111 +123,168 @@
   </div>
 </section>
 
-<!-- ============ À PROPOS ============ -->
-<section class="section" id="apropos">
-  <div class="conteneur">
-    <div class="duo">
-      <img src="photop.png" alt="Photo de Marine" style="border-radius:var(--rayon-m); box-shadow:var(--ombre); width:100%; height:auto;">
-      <div>
-        <h2>Qui je suis</h2>
-        <p>Depuis toujours, les animaux occupent une place essentielle dans ma vie. J'ai créé <strong>Onystic Lumière</strong> avec l'envie profonde d'offrir un espace où chacun peut nourrir le lien si précieux qui l'unit aux êtres qui partagent son quotidien.</p>
-        <p>Après une formation de 9 mois en communication animale et soins énergétiques holistiques, je mets ma sensibilité au service d'un accompagnement doux, respectueux et bienveillant.</p>
-        
-        <div class="encadre mt-s">
-          <p><strong>Note importante :</strong> Mes accompagnements sont des approches complémentaires qui visent le bien-être et ne remplacent en aucun cas un avis ou suivi vétérinaire/médical.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FAQ ============ -->
-<section class="section section--douce" id="faq">
-  <div class="conteneur">
-    <div class="section__entete">
-      <h2>Questions fréquentes</h2>
-    </div>
-    <div class="faq">
-      <details open>
-        <summary>Les séances se déroulent-elles à distance ?</summary>
-        <p>Oui, les consultations sont réalisées à distance, sur rendez-vous uniquement. La communication animale et les soins énergétiques fonctionnent parfaitement à partir d'une photo et d'un temps d'échange.</p>
-      </details>
-      <details>
-        <summary>Comment se déroule un compte rendu ?</summary>
-        <p>Selon l'accompagnement choisi, les échanges et comptes rendus sont retransmis en visio, par appel ou sous forme de document écrit (PDF).</p>
-      </details>
-      <details>
-        <summary>Est-ce adapté aux humains comme aux animaux ?</summary>
-        <p>Oui ! Les soins énergétiques et la cartomancie s’adressent aussi bien aux personnes qu’aux animaux.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="section" id="contact">
-  <div class="conteneur">
-    <div class="section__entete">
-      <h2>Me contacter</h2>
-      <p>Envie d'en savoir plus ou de réserver une séance ? Je serai ravie d'échanger avec vous.</p>
-    </div>
-    <form class="formulaire" onsubmit="return false" style="margin-inline:auto">
-      <div><label for="nom">Votre prénom</label><input id="nom" type="text" placeholder="Votre prénom"></div>
-      <div><label for="mail">Votre email</label><input id="mail" type="email" placeholder="votre.email@exemple.com"></div>
-      <div><label for="service">Service souhaité</label>
-        <select id="service">
-          <option>Communication animale</option>
-          <option>Soins énergétiques</option>
-          <option>Cartomancie / Guidance</option>
-        </select>
-      </div>
-      <div><label for="msg">Votre message</label><textarea id="msg" placeholder="Expliquez-moi vos besoins ou vos questions..."></textarea></div>
-      <button class="btn btn--rdv" type="button">Envoyer</button>
-    </form>
-  </div>
-</section>
-
-<!-- ============ BANDEAU RDV ============ -->
+<!-- ============ BANDEAU RDV & CONTACT ============ -->
 <section class="section section--sombre bandeau-rdv">
   <div class="conteneur">
     <h2>Prêt(e) à nourrir ce lien précieux ?</h2>
     <p>Chaque séance est pensée comme un espace sécurisant, respectueux et profond.</p>
-    <a class="btn btn--rdv" href="#contact">Contactez-moi</a>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+      <a class="btn btn--rdv" href="#contact">Me contacter</a>
+      <a class="btn btn--contour" href="https://calendar.app.google/sppumjCMSUgfSSsp7" target="_blank" style="color: white; border-color: white;">Prendre rendez-vous</a>
+    </div>
   </div>
 </section>
 
-</main>
+<!-- ============ FAQ ET AVIS CLIENTS ============ -->
+<section class="section section-faq-avis">
+  <div class="conteneur grille grille--2">
+    
+    <!-- Colonne 1 : FAQ -->
+    <div class="colonne-centree">
+      <h2>Questions fréquentes</h2>
+      <div class="faq">
+        <details open>
+          <summary>Les séances se déroulent-elles à distance ?</summary>
+          <p>Oui, les consultations sont réalisées à distance, sur rendez-vous uniquement. La communication animale et les soins énergétiques fonctionnent parfaitement à partir d'une photo et d'un temps d'échange.</p>
+        </details>
+        <details>
+          <summary>Comment se déroule un compte rendu ?</summary>
+          <p>Explication du compte rendu...</p>
+        </details>
+        <details>
+          <summary>Est-ce adapté aux humains comme aux animaux ?</summary>
+          <p>Explication de la prise en charge...</p>
+        </details>
+      </div>
+    </div>
 
-<!-- ============ PIED DE PAGE ============ -->
-<footer class="pied">
-  <div class="conteneur">
-    <div class="pied__colonnes">
-      <div>
-        <h3>Onystic Lumière</h3>
-        <p>Un accompagnement doux pour le cœur et l’âme.</p>
-        <p>
-          📞 06.03.29.59.08<br>
-          ✉️ onysticlumiere@gmail.com<br>
-          📷 Instagram : @onystic_lumiere
+    <!-- Colonne 2 : Carrousel d'Avis -->
+    <div class="colonne-centree">
+      <h2>Avis clients</h2>
+      
+      <div class="carrousel-avis">
+        <!-- Cartes d'avis -->
+        <article class="avis avis--actif">
+          <p class="avis__texte">« Une séance de communication animale bluffante de justesse. Merci pour ta douceur et tes réponses précieuses ! »</p>
+          <p class="avis__auteur">— Sophie & Moka</p>
+        </article>
+
+        <article class="avis">
+          <p class="avis__texte">« Le soin énergétique m'a procuré un apaisement immédiat. Une très belle expérience que je recommande vivement. »</p>
+          <p class="avis__auteur">— Camille</p>
+        </article>
+
+        <article class="avis">
+          <p class="avis__texte">« Une expérience magique et réconfortante. Merci infiniment pour ton écoute. »</p>
+          <p class="avis__auteur">— Lucile & Orion</p>
+        </article>
+
+        <!-- Navigation carrousel (Flèches) -->
+        <div class="nav-carrousel">
+          <button type="button" class="btn-fleche" id="avis-prev" aria-label="Avis précédent">❮</button>
+          <button type="button" class="btn-fleche" id="avis-next" aria-label="Avis suivant">❯</button>
+        </div>
+      </div>
+
+      <!-- Bouton Laisser un avis -->
+      <div class="mt-m">
+        <a href="https://forms.gle/u1TMVAT9fyMTPCSEA" target="_blank" rel="noopener noreferrer" class="btn btn--contour btn--petit">
+          Laisser un avis
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============ SECTION CONTACT & INFOS ============ -->
+<section class="section-contact-duo" id="contact">
+  <div class="conteneur-duo">
+    
+    <!-- Carte 1 : Informations & Coordonnées -->
+    <div class="carte-contact">
+      <h3>Onystic Lumière</h3>
+      <p class="description-soft">Un accompagnement doux pour le cœur et l'âme.</p>
+      
+      <div class="groupe-infos">
+        <p>📞 06.03.29.59.08</p>
+        <p>✉️ <a href="mailto:onysticlumiere@gmail.com">onysticlumiere@gmail.com</a></p>        
+        <p class="lien-instagram">
+          <a href="https://www.instagram.com/onystic_lumiere" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            <span> @onystic_lumiere</span>
+          </a>
         </p>
       </div>
-      <div>
-        <h3>Services</h3>
+
+      <div class="groupe-infos">
+        <h4>Services</h4>
         <ul>
           <li><a href="communication-animale.html">Communication animale</a></li>
           <li><a href="soins-energetiques.html">Soins énergétiques</a></li>
           <li><a href="cartomancie.html">Cartomancie</a></li>
         </ul>
       </div>
-      <div>
-        <h3>Informations</h3>
+
+      <div class="groupe-infos">
+        <h4>Informations</h4>
         <ul>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#apropos">À propos</a></li>
-          <li><a href="#haut">Mentions légales</a></li>
+          <li><a href="#a-propos">À propos</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </div>
     </div>
+
+    <!-- Carte 2 : Formulaire de contact -->
+    <div class="carte-contact">
+      <div class="entete-form">
+        <h2>Me contacter</h2>
+        <p>Envie d'en savoir plus ou de réserver une séance ? Je serai ravie d'échanger avec vous.</p>
+      </div>
+
+      <form class="formulaire-contact" onsubmit="return false">
+        <div class="champ">
+          <label for="prenom">Votre prénom</label>
+          <input type="text" id="prenom" placeholder="Votre prénom">
+        </div>
+
+        <div class="champ">
+          <label for="email">Votre email</label>
+          <input type="email" id="email" placeholder="votre.email@exemple.com">
+        </div>
+
+        <div class="champ">
+          <label for="telephone">Votre Téléphone</label>
+          <input type="tel" id="telephone" placeholder="votre nº de téléphone">
+        </div>
+
+        <div class="champ">
+          <label for="service-select">Service souhaité</label>
+          <select id="service-select">
+            <option>Communication animale</option>
+            <option>Soins énergétiques</option>
+            <option>Cartomancie / Guidance</option>
+          </select>
+        </div>
+
+        <div class="champ">
+          <label for="message">Votre message</label>
+          <textarea id="message" placeholder="Expliquez-moi vos besoins ou vos questions..."></textarea>
+        </div>
+
+        <button type="button" class="btn btn--rdv">Envoyer</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============ PIED DE PAGE ============ -->
+<footer class="pied">
+  <div class="conteneur">
     <p class="pied__legal mb-0" style="max-width:none">© Onystic Lumière – Site créé avec douceur et bienveillance</p>
   </div>
 </footer>

@@ -2,53 +2,45 @@
    ONYSTIC LUMIÈRE – Feuille de style principale
    "Un accompagnement doux pour le cœur et l'âme"
 
-   À mettre dans le <head> de chaque page HTML :
-
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
-
    SOMMAIRE
-   1. Variables (couleurs, polices, tailles, espacements)
-   2. Base (reset + typographie)
-   3. Mise en page (conteneur, sections, grilles)
-   4. Composants (header, boutons, hero, cartes, avis, FAQ, formulaire, footer)
-   5. Utilitaires
-   6. Responsive
-   7. Accessibilité (focus, mouvement réduit)
+   1. Variables
+   2. Base
+   3. Mise en page & Grilles
+   4. Composants (Header, Boutons, Hero, Cartes, Tarifs, Avis/Carrousel, FAQ)
+   5. Section Contact Duo
+   6. Pied de page (Footer)
+   7. Utilitaires
+   8. Responsive & Accessibilité
    ===================================================================== */
 
 
 /* =====================================================================
    1. VARIABLES
-   Pour changer une couleur ou une police sur tout le site,
-   il suffit de la modifier ici.
    ===================================================================== */
 :root {
   /* --- Couleurs de la charte --- */
-  --brun:    #66412b;   /* texte principal, titres, boutons */
-  --peche:   #eecbae;   /* fonds doux, bordures */
-  --caramel: #d09064;   /* accents secondaires, séparateurs */
-  --olive:   #899a41;   /* touche nature, avis, détails */
-  --orange:  #cb6e3a;   /* appels à l'action, survols, liens */
+  --brun:        #66412b;   /* texte principal, titres, boutons */
+  --peche:       #eecbae;   /* fonds doux, bordures */
+  --caramel:     #d09064;   /* accents secondaires, séparateurs */
+  --olive:       #899a41;   /* touche nature, avis, détails */
+  --orange:      #cb6e3a;   /* appels à l'action, survols, liens */
 
-  /* --- Couleurs dérivées (nuances plus claires pour les fonds) --- */
+  /* --- Couleurs dérivées --- */
   --fond:        #fcf6ef;   /* fond général du site */
   --fond-doux:   #f6e4d3;   /* fond des sections alternées */
   --blanc:       #ffffff;
   --brun-fonce:  #4a2e1e;   /* survol des éléments bruns */
 
   /* --- Polices --- */
-  --police-titre: "Great Vibes", cursive;                                /* logo, grands titres */
-  --police-texte: "Cormorant Garamond", Georgia, "Times New Roman", serif; /* tout le reste */
+  --police-titre: "Great Vibes", cursive;
+  --police-texte: "Cormorant Garamond", Georgia, "Times New Roman", serif;
 
-  /* --- Tailles de texte (s'adaptent à l'écran) --- */
+  /* --- Tailles de texte --- */
   --taille-texte:  clamp(1.125rem, 1.05rem + 0.3vw, 1.3rem);
   --taille-petit:  1rem;
-  --taille-h1:     clamp(3rem, 2rem + 5vw, 5.5rem);    /* Great Vibes */
-  --taille-h2:     clamp(2.2rem, 1.7rem + 2.2vw, 3.4rem); /* Great Vibes */
-  --taille-h3:     clamp(1.6rem, 1.4rem + 1vw, 2.1rem);  /* Cormorant */
+  --taille-h1:     clamp(3rem, 2rem + 5vw, 5.5rem);
+  --taille-h2:     clamp(2.2rem, 1.7rem + 2.2vw, 3.4rem);
+  --taille-h3:     clamp(1.6rem, 1.4rem + 1vw, 2.1rem);
   --taille-h4:     1.35rem;
 
   /* --- Espacements --- */
@@ -56,21 +48,17 @@
   --espace-s:  1rem;
   --espace-m:  1.75rem;
   --espace-l:  3rem;
-  --espace-xl: clamp(4rem, 3rem + 5vw, 7rem);   /* espace entre sections */
+  --espace-xl: clamp(4rem, 3rem + 5vw, 7rem);
 
-  /* --- Formes --- */
+  /* --- Formes & Ombres --- */
   --rayon-s:    10px;
   --rayon-m:    20px;
   --rayon-pill: 999px;
-
-  /* --- Ombre douce (teintée marron, pas grise) --- */
   --ombre: 0 8px 28px rgba(102, 65, 43, 0.12);
 
-  /* --- Largeurs --- */
+  /* --- Largeurs & Transitions --- */
   --largeur-max:   1100px;
-  --largeur-texte: 68ch;   /* confort de lecture */
-
-  /* --- Transitions --- */
+  --largeur-texte: 68ch;
   --transition: 0.25s ease;
 }
 
@@ -91,14 +79,13 @@ body {
   color: var(--brun);
   font-family: var(--police-texte);
   font-size: var(--taille-texte);
-  font-weight: 500;          /* Cormorant est fin : 500 améliore la lisibilité */
+  font-weight: 500;
   line-height: 1.7;
 }
 
 img, picture, svg { display: block; max-width: 100%; height: auto; }
 
-/* --- Titres ---
-   h1 et h2 : Great Vibes (script). h3 et h4 : Cormorant (plus lisible en petit). */
+/* --- Typographie --- */
 h1, h2 {
   font-family: var(--police-titre);
   font-weight: 400;
@@ -119,14 +106,12 @@ h4 { font-size: var(--taille-h4); }
 
 p { margin: 0 0 var(--espace-s); max-width: var(--largeur-texte); }
 
-/* --- Sous-titre / slogan en italique --- */
 .slogan {
   font-style: italic;
   font-weight: 400;
   font-size: clamp(1.4rem, 1.2rem + 1vw, 2rem);
 }
 
-/* --- Liens --- */
 a {
   color: var(--orange);
   text-decoration-thickness: 1px;
@@ -135,7 +120,6 @@ a {
 }
 a:hover { color: var(--brun-fonce); }
 
-/* --- Listes dans le contenu --- */
 ul, ol { padding-left: 1.3em; margin: 0 0 var(--espace-s); }
 li { margin-bottom: 0.4em; }
 li::marker { color: var(--olive); }
@@ -150,37 +134,31 @@ hr {
 
 
 /* =====================================================================
-   3. MISE EN PAGE
+   3. MISE EN PAGE & GRILLES
    ===================================================================== */
-
-/* Centre le contenu et limite sa largeur */
 .conteneur {
   width: min(100% - 2.5rem, var(--largeur-max));
   margin-inline: auto;
 }
 
-/* Bloc de page : chaque grande partie d'une page est une .section */
 .section { padding-block: var(--espace-xl); }
 .section--douce  { background: var(--fond-doux); }
 .section--sombre { background: var(--brun); color: var(--fond); }
-.section--sombre h1,
-.section--sombre h2,
-.section--sombre h3 { color: var(--peche); }
+.section--sombre h1, .section--sombre h2, .section--sombre h3 { color: var(--peche); }
 .section--sombre a { color: var(--peche); }
 
-/* En-tête de section (titre + intro) */
 .section__entete { text-align: center; margin-bottom: var(--espace-l); }
 .section__entete p { margin-inline: auto; }
 
-/* Grilles : colonnes automatiques selon la largeur de l'écran */
+/* Grilles réutilisables */
 .grille {
   display: grid;
   gap: var(--espace-m);
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: start;
 }
 .grille--2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
 
-/* Texte + image côte à côte (page "À propos", présentation d'un service) */
 .duo {
   display: grid;
   gap: var(--espace-l);
@@ -189,12 +167,23 @@ hr {
 }
 .duo img { border-radius: var(--rayon-m); box-shadow: var(--ombre); }
 
+/* Colonnes centrées (FAQ / Avis) */
+.colonne-centree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.colonne-centree h2 { margin-bottom: var(--espace-m); }
+.colonne-centree .faq { width: 100%; text-align: left; }
+
 
 /* =====================================================================
    4. COMPOSANTS
    ===================================================================== */
 
-/* ---------- 4.1 En-tête + navigation ---------- */
+/* ---------- En-tête + Navigation ---------- */
 .entete {
   position: sticky;
   top: 0;
@@ -229,13 +218,11 @@ hr {
   padding-block: 0.3rem;
   border-bottom: 2px solid transparent;
 }
-.nav a:hover,
-.nav a[aria-current="page"] {
+.nav a:hover, .nav a[aria-current="page"] {
   color: var(--orange);
   border-bottom-color: var(--orange);
 }
 
-/* Sous-menu "Services" */
 .nav__item--deroulant { position: relative; }
 .nav__sous-menu {
   position: absolute;
@@ -269,7 +256,6 @@ hr {
 }
 .nav__sous-menu a:hover { background: var(--fond-doux); }
 
-/* Bouton menu mobile (☰) */
 .nav__bouton {
   display: none;
   background: none;
@@ -282,8 +268,7 @@ hr {
   cursor: pointer;
 }
 
-
-/* ---------- 4.2 Boutons ---------- */
+/* ---------- Boutons ---------- */
 .btn {
   display: inline-block;
   padding: 0.8em 1.8em;
@@ -298,7 +283,7 @@ hr {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  transition: background var(--transition), border-color var(--transition), color var(--transition);
+  transition: background var(--transition), border-color var(--transition), color var(--transition), transform var(--transition);
 }
 .btn:hover {
   background: var(--brun-fonce);
@@ -306,7 +291,6 @@ hr {
   color: var(--blanc);
 }
 
-/* Bouton "Prendre rendez-vous" : la couleur d'action du site */
 .btn--rdv {
   background: var(--orange);
   border-color: var(--orange);
@@ -316,9 +300,10 @@ hr {
 .btn--rdv:hover {
   background: var(--brun);
   border-color: var(--brun);
+  color: var(--blanc);
+  transform: translateY(-2px);
 }
 
-/* Bouton discret, sans fond */
 .btn--contour {
   background: transparent;
   color: var(--brun);
@@ -330,12 +315,7 @@ hr {
 
 .btn--petit { padding: 0.55em 1.3em; font-size: 1rem; }
 
-/* Sur fond marron, les boutons s'inversent */
-.section--sombre .btn--contour { color: var(--peche); border-color: var(--peche); }
-.section--sombre .btn--contour:hover { background: var(--peche); color: var(--brun); }
-
-
-/* ---------- 4.3 Hero (haut de la page d'accueil) ---------- */
+/* ---------- Hero ---------- */
 .hero {
   position: relative;
   display: grid;
@@ -347,7 +327,6 @@ hr {
   background-size: cover;
   background-position: center;
 }
-/* Voile clair pour garder le texte lisible sur la photo */
 .hero::before {
   content: "";
   position: absolute;
@@ -359,12 +338,10 @@ hr {
 .hero p { margin-inline: auto; }
 .hero .btn { margin-top: var(--espace-s); }
 
-/* Version plus petite pour les pages intérieures */
 .hero--page { min-height: 0; padding-block: var(--espace-l); }
 .hero--page h1 { font-size: var(--taille-h2); }
 
-
-/* ---------- 4.4 Cartes (services, articles de blog) ---------- */
+/* ---------- Cartes Prestations ---------- */
 .carte {
   display: flex;
   flex-direction: column;
@@ -389,7 +366,6 @@ hr {
 .carte__contenu p { flex: 1; }
 .carte__contenu .btn { align-self: flex-start; }
 
-/* Étiquette de catégorie (blog) */
 .etiquette {
   display: inline-block;
   align-self: flex-start;
@@ -402,37 +378,7 @@ hr {
   font-weight: 600;
 }
 
-
-/* ---------- 4.5 Avis clients ----------
-   Ces cartes seront générées par le JavaScript à partir du Google Sheet. */
-.avis {
-  position: relative;
-  margin: 0;
-  padding: var(--espace-m);
-  background: var(--blanc);
-  border-radius: var(--rayon-m);
-  border-left: 5px solid var(--olive);
-  box-shadow: var(--ombre);
-}
-.avis__texte {
-  margin: 0 0 var(--espace-s);
-  font-style: italic;
-  font-size: 1.2rem;
-}
-.avis__auteur {
-  margin: 0;
-  font-weight: 700;
-  color: var(--orange);
-}
-.avis__animal {
-  display: block;
-  font-weight: 500;
-  font-size: var(--taille-petit);
-  color: var(--brun);
-}
-
-
-/* ---------- 4.6 Tarifs ---------- */
+/* ---------- Tarifs ---------- */
 .tarif {
   display: flex;
   flex-direction: column;
@@ -451,8 +397,78 @@ hr {
 }
 .tarif__duree { font-size: var(--taille-petit); margin-bottom: var(--espace-s); }
 
+/* ---------- Avis & Carrousel ---------- */
+.avis {
+  position: relative;
+  margin: 0;
+  padding: var(--espace-m);
+  background: var(--blanc);
+  border: 1px solid var(--peche);
+  border-left: 5px solid var(--olive);
+  border-radius: var(--rayon-m);
+  box-shadow: var(--ombre);
+  text-align: left;
+  box-sizing: border-box;
+}
 
-/* ---------- 4.7 FAQ (balises <details> / <summary>, sans JavaScript) ---------- */
+.avis__texte {
+  margin: 0 0 var(--espace-s);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--brun);
+}
+
+.avis__auteur {
+  margin: 0;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.carrousel-avis {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carrousel-avis .avis {
+  display: none;
+  width: 100%;
+}
+
+.carrousel-avis .avis.avis--actif {
+  display: block;
+}
+
+.nav-carrousel {
+  display: flex;
+  gap: var(--espace-s);
+  margin-top: var(--espace-s);
+}
+
+.btn-fleche {
+  background: var(--blanc);
+  border: 1px solid var(--peche);
+  color: var(--brun);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.btn-fleche:hover {
+  background: var(--peche);
+  border-color: var(--caramel);
+}
+
+/* ---------- FAQ ---------- */
 .faq { max-width: 820px; margin-inline: auto; }
 .faq details {
   background: var(--blanc);
@@ -467,6 +483,7 @@ hr {
   font-size: 1.25rem;
   font-weight: 600;
   cursor: pointer;
+  color: var(--brun);
 }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after {
@@ -485,47 +502,157 @@ hr {
 .faq details > p:last-child { padding-bottom: 1rem; margin-bottom: 0; }
 
 
-/* ---------- 4.8 Formulaires (contact) ---------- */
-.formulaire { display: grid; gap: var(--espace-s); max-width: 640px; }
-.formulaire label { display: block; margin-bottom: 0.25rem; font-weight: 600; }
+/* =====================================================================
+   5. SECTION CONTACT DUO
+   ===================================================================== */
+.section-contact-duo {
+  padding-block: var(--espace-xl);
+}
 
-.formulaire input,
-.formulaire select,
-.formulaire textarea {
-  width: 100%;
-  padding: 0.75em 1em;
-  background: var(--blanc);
+.conteneur-duo {
+  max-width: var(--largeur-max);
+  margin: 0 auto;
+  display: flex;
+  gap: var(--espace-l);
+  align-items: stretch;
+}
+
+/* Carte Gauche (Fond Marron Chaleureux) */
+.carte-contact:first-child {
+  flex: 0 0 40%;
+  background-color: var(--brun);
+  color: var(--peche);
+  border-radius: var(--rayon-m);
+  padding: var(--espace-l);
+  box-shadow: var(--ombre);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-m);
+}
+
+.carte-contact:first-child h3 {
+  color: var(--blanc);
+  font-family: var(--police-titre);
+  font-size: clamp(2rem, 1.5rem + 1.5vw, 2.5rem);
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+}
+
+.carte-contact:first-child h4 {
+  color: var(--caramel);
+  font-size: 1.1rem;
+  margin-bottom: var(--espace-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.carte-contact:first-child a {
+  color: var(--peche);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.carte-contact:first-child a:hover {
+  color: var(--blanc);
+  text-decoration: underline;
+}
+
+.lien-instagram a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.6rem;
+}
+
+.icone-puce {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--fond-doux);
+  border: 1.5px solid var(--brun);
   color: var(--brun);
-  border: 1.5px solid var(--caramel);
-  border-radius: var(--rayon-s);
-  font: inherit;
+  flex-shrink: 0;
 }
-.formulaire textarea { min-height: 160px; resize: vertical; }
-.formulaire input:focus,
-.formulaire select:focus,
-.formulaire textarea:focus {
-  outline: 3px solid var(--peche);
+
+.icone-puce svg {
+  display: block !important;
+  width: 18px;
+  height: 18px;
+}
+
+/* Carte Droite (Formulaire Blanc) */
+.carte-contact:last-child {
+  flex: 1;
+  background: var(--blanc);
+  border-radius: var(--rayon-m);
+  padding: var(--espace-l);
+  border: 1px solid var(--peche);
+  box-shadow: var(--ombre);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-m);
+}
+
+.entete-form h2 {
+  font-family: var(--police-titre);
+  color: var(--brun);
+  font-size: clamp(2.2rem, 1.8rem + 1.5vw, 3rem);
+  margin-bottom: var(--espace-xs);
+}
+
+.formulaire-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-s);
+}
+
+.champ {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.champ label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--brun);
+}
+
+.champ input,
+.champ select,
+.champ textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--fond);
+  color: var(--brun);
+  border: 1.5px solid var(--peche);
+  border-radius: var(--rayon-s);
+  font-family: inherit;
+  font-size: 1.05rem;
+  box-sizing: border-box;
+  transition: border-color var(--transition), background-color var(--transition), box-shadow var(--transition);
+}
+
+.champ textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.champ input:focus,
+.champ select:focus,
+.champ textarea:focus {
+  outline: none;
   border-color: var(--orange);
+  background-color: var(--blanc);
+  box-shadow: 0 0 0 3px rgba(203, 110, 58, 0.2);
 }
 
 
-/* ---------- 4.9 Encadré d'information (avertissement vétérinaire, etc.) ---------- */
-.encadre {
-  padding: var(--espace-s) var(--espace-m);
-  background: var(--fond-doux);
-  border-left: 5px solid var(--caramel);
-  border-radius: var(--rayon-s);
-  font-size: var(--taille-petit);
-}
-.encadre p:last-child { margin-bottom: 0; }
-
-
-/* ---------- 4.10 Bandeau d'appel à l'action (en bas de chaque page) ---------- */
-.bandeau-rdv { text-align: center; }
-.bandeau-rdv p { margin-inline: auto; }
-
-
-/* ---------- 4.11 Pied de page ---------- */
+/* =====================================================================
+   6. PIED DE PAGE
+   ===================================================================== */
 .pied {
   padding-block: var(--espace-l);
   background: var(--brun);
@@ -550,8 +677,7 @@ hr {
 
 
 /* =====================================================================
-   5. UTILITAIRES
-   Petites classes à ajouter ponctuellement dans le HTML.
+   7. UTILITAIRES
    ===================================================================== */
 .centre       { text-align: center; }
 .centre p     { margin-inline: auto; }
@@ -560,20 +686,10 @@ hr {
 .mt-l  { margin-top: var(--espace-l); }
 .mb-0  { margin-bottom: 0; }
 .texte-orange { color: var(--orange); }
-.texte-olive-fonce { color: #5c6a24; }
-
-/* Cache visuellement mais reste lisible par les lecteurs d'écran */
-.cache {
-  position: absolute !important;
-  width: 1px; height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-}
 
 
 /* =====================================================================
-   6. RESPONSIVE (téléphone et tablette)
+   8. RESPONSIVE & ACCESSIBILITÉ
    ===================================================================== */
 @media (max-width: 860px) {
   .nav__bouton { display: inline-block; }
@@ -588,49 +704,34 @@ hr {
     background: var(--fond);
     border-bottom: 1px solid var(--peche);
   }
-  /* Le JavaScript ajoutera la classe "ouvert" au clic sur le bouton ☰ */
   .nav.ouvert { display: block; }
-
   .nav ul { flex-direction: column; align-items: flex-start; gap: var(--espace-s); }
 
-  /* Sur mobile, le sous-menu est toujours déplié, simplement indenté */
-  .nav__sous-menu {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    border: 0;
-    box-shadow: none;
-    background: transparent;
-    padding-left: var(--espace-s) !important;
+  .conteneur-duo {
+    flex-direction: column;
   }
 
-  .logo img { height: 52px; }
+  .carte-contact:first-child,
+  .carte-contact:last-child {
+    flex: 1 1 100%;
+    padding: var(--espace-m);
+  }
 }
 
 @media (max-width: 520px) {
   .btn { width: 100%; }
-  .carte__contenu .btn { align-self: stretch; }
 }
 
-
-/* =====================================================================
-   7. ACCESSIBILITÉ
-   ===================================================================== */
-
-/* Contour visible quand on navigue au clavier */
 :focus-visible {
   outline: 3px solid var(--orange);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
-/* Respecte le réglage "réduire les animations" de l'appareil */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
   }
-  .carte:hover { transform: none; }
 }
