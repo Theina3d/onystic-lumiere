@@ -1,106 +1,243 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Communication Animale – Onystic Lumière</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- En-tête -->
   <header class="entete">
     <div class="conteneur entete__interieur">
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="Onystic Lumière Logo">
+      <a class="logo" href="index.html" aria-label="Aller à l'accueil">
+        <img src="logo.png" alt="Logo Onystic Lumière" style="height:50px; margin-right:10px;">
+        <span style="font-family:var(--police-titre);font-size:2.2rem;color:var(--brun);line-height:1">Onystic Lumière</span>
       </a>
-      <nav class="nav">
+      <button class="nav__bouton" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+      <nav class="nav" id="menu" aria-label="Menu principal">
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="communication-animale.html" aria-current="page">Communication Animale</a></li>
-          <li><a href="soins-energetiques.html">Soins Énergétiques</a></li>
-          <li><a href="cartomancie.html">Cartomancie</a></li>
-          <li><a href="tarifs.html">Tarifs</a></li>
-          <li><a href="rendez-vous.html" class="btn btn--rdv btn--petit">Rendez-vous</a></li>
+          <li><a href="avancement.html">Avancement</a></li>
+          <li class="nav__item--deroulant">
+            <a href="index.html#services" aria-current="page">Services</a>
+            <ul class="nav__sous-menu">
+              <li><a href="communication-animale.html">Communication animale</a></li>
+              <li><a href="soins-energetiques.html">Soins énergétiques</a></li>
+              <li><a href="cartomancie.html">Cartomancie</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#apropos">À propos</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a class="btn btn--rdv btn--petit" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero hero--page">
+    <!-- Hero Section -->
+    <section class="hero hero--page" style="background-image: url('photop.png');">
       <div class="conteneur">
         <h1>Communication Animale</h1>
-        <p class="slogan">« Écouter les émotions et les messages de votre compagnon pour renforcer votre lien avec lui. »</p>
+        <p class="slogan">Écouter les émotions et les messages de votre compagnon pour renforcer votre lien.</p>
       </div>
     </section>
 
+    <!-- Présentation détaillée -->
     <section class="section">
       <div class="conteneur duo">
         <div>
-          <h2>Comprendre les émotions & les besoins</h2>
-          <p>À l'écoute de votre animal, à vos côtés, pour une relation plus forte, plus vraie et plus sereine.</p>
-          <p><strong>Vous rencontrez des difficultés avec votre animal ?</strong></p>
-          <ul>
-            <li>Problème de comportement</li>
-            <li>Stress ou anxiété</li>
-            <li>Animal triste ou distant</li>
-            <li>Arrivée d'un nouvel animal dans le foyer</li>
-            <li>Comprendre ses besoins profonds</li>
-          </ul>
+          <h2>Une écoute d'âme à d'âme</h2>
+          <p>
+            La communication animale intuitive permet d'établir un espace de connexion d'âme à d'âme avec votre compagnon. Elle offre un éclairage précieux sur ses ressentis, ses besoins profonds, ses inconforts ou son histoire.
+          </p>
+          <p>
+            Elle s'adresse aux animaux du quotidien (chiens, chats, chevaux, NAC) comme aux animaux disparus ou défunts, dans une approche empreinte de douceur, de respect et de bienveillance.
+          </p>
+          <p>
+            L'objectif est d'agir comme un pont de compréhension entre vous et votre animal pour restaurer l'harmonie, mieux vivre les transitions et approfondir votre complicité.
+          </p>
+          
+          <div class="encadre mt-m" style="border-left: 4px solid var(--olive); padding-left: 1rem; background: var(--fond-doux); padding-block: 0.8rem; border-radius: var(--rayon-s);">
+            <p style="margin-bottom: 0; font-style: italic; font-size: 0.95rem;">
+              <strong>Note importante :</strong> La communication animale repose sur la réception de perceptions intuitives. Elle ne remplace en aucun cas l'avis d'un vétérinaire ni l'accompagnement d'un comportementaliste animalier.
+            </p>
+          </div>
         </div>
         <div>
-          <img src="images/communication-animale.jpg" alt="Communication Animale avec un chien">
+          <img src="com_a.png"Communication animale intuitive" style="border-radius:var(--rayon-m); box-shadow:var(--ombre);">
         </div>
       </div>
     </section>
 
+    <!-- Domaines d'intervention -->
     <section class="section section--douce">
       <div class="conteneur">
         <div class="section__entete">
-          <h2>Formules & Tarifs</h2>
+          <h2>Pourquoi effectuer une communication animale ?</h2>
+          <p>Des réponses concrètes pour accompagner votre compagnon à chaque étape.</p>
+        </div>
+        <div class="grille grille--2">
+          
+          <article class="carte">
+            <div class="carte__contenu">
+              <span class="etiquette">Comportement</span>
+              <h3>Changements & Inquiétudes</h3>
+              <p>Comprendre l'origine d'un comportement inhabituel, d'une peur soudaine, d'une anxiété de séparation ou d'une agressivité inexpliquée.</p>
+            </div>
+          </article>
+
+          <article class="carte">
+            <div class="carte__contenu">
+              <span class="etiquette">Changements</span>
+              <h3>Transitions de vie</h3>
+              <p>Préparer votre animal à un événement important : un déménagement, l'arrivée d'un bébé, un nouveau compagnon ou un départ en vacances.</p>
+            </div>
+          </article>
+
+          <article class="carte">
+            <div class="carte__contenu">
+              <span class="etiquette">Mieux-être</span>
+              <h3>Inconforts & Santé</h3>
+              <p>Localiser des zones de gêne ou de fatigue pour adapter le quotidien d'un animal vieillissant ou en convalescence.</p>
+            </div>
+          </article>
+
+          <article class="carte">
+            <div class="carte__contenu">
+              <span class="etiquette">Lien du cœur</span>
+              <h3>Animaux défunts & Deuil</h3>
+              <p>Maintenir la connexion avec un compagnon parti de l'autre côté, transmettre des messages et apaiser le chemin du deuil.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Déroulement -->
+    <section class="section">
+      <div class="conteneur">
+        <div class="section__entete">
+          <h2>Comment se déroule la séance ?</h2>
+        </div>
+        <div class="grille">
+          
+          <div class="tarif" style="align-items: flex-start; text-align: left;">
+            <span style="font-size: 1.5rem; color: var(--orange); font-weight: 700;">01. Envoi des éléments</span>
+            <h3 style="margin-top: 0.5rem;">Photo & Questions</h3>
+            <p>Vous transmettez une photo récente de l'animal seul (yeux bien visibles), son prénom, son âge et la liste de vos questions.</p>
+          </div>
+
+          <div class="tarif" style="align-items: flex-start; text-align: left;">
+            <span style="font-size: 1.5rem; color: var(--orange); font-weight: 700;">02. La Connexion</span>
+            <h3 style="margin-top: 0.5rem;">Travail intuitif à distance</h3>
+            <p>Marine réalise la communication à distance dans un temps de calme absolu, sans perturber le quotidien de l'animal.</p>
+          </div>
+
+          <div class="tarif" style="align-items: flex-start; text-align: left;">
+            <span style="font-size: 1.5rem; color: var(--orange); font-weight: 700;">03. La Restitution</span>
+            <h3 style="margin-top: 0.5rem;">Échange Visio & PDF</h3>
+            <p>Un rendez-vous en visio est fixé pour échanger oralement sur les messages perçus, suivi d'un compte rendu écrit complet.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarifs -->
+    <section class="section section--douce">
+      <div class="conteneur">
+        <div class="section__entete">
+          <h2>Tarifs & Offres</h2>
+          <p>Des formules claires pour répondre aux besoins de votre binôme.</p>
         </div>
         <div class="grille grille--2">
 
-          <!-- Option 1 -->
           <article class="carte tarif">
-            <span class="etiquette">Formule Classique</span>
-            <h3>Communication Animale</h3>
-            <p class="tarif__prix">110 €</p>
-            <span class="tarif__duree">⏱️ Durée : 2h30 à 3h</span>
-            <ul style="text-align: left;">
-              <li>Temps d'échange libre avec l'animal</li>
-              <li>Retransmission des messages en visio</li>
-              <li>Temps de questions / réponses</li>
-              <li>Compte rendu écrit & visio pour relire et réécouter à tout moment</li>
-            </ul>
-            <a href="rendez-vous.html" class="btn btn--rdv mt-auto">Réserver cette séance</a>
+            <div class="carte__contenu">
+              <span class="etiquette">Formule Classique</span>
+              <h3>Communication Animale</h3>
+              <p class="tarif__prix">110 €</p>
+              <span class="tarif__duree">⏱️ Durée : 2h30 à 3h d'accompagnement</span>
+              <ul style="text-align: left; margin-top: var(--espace-s);">
+                <li>Temps d'échange intuitif libre et approfondi</li>
+                <li>Restitution détaillée lors d'un rendez-vous en visio</li>
+                <li>Espace d'échange et de réponses à vos questions</li>
+                <li>Compte rendu écrit complet au format PDF transmis après la séance</li>
+              </ul>
+              <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer" class="btn btn--rdv mt-m">Réserver cette séance</a>
+            </div>
           </article>
 
-          <!-- Option 2 -->
           <article class="carte tarif">
-            <span class="etiquette">Accompagnement Complet</span>
-            <h3>Communication & Soin Énergétique</h3>
-            <p class="tarif__prix">155 €</p>
-            <span class="tarif__duree">⏱️ Séance globale</span>
-            <ul style="text-align: left;">
-              <li>Communication animale complète</li>
-              <li>Soin énergétique sur l'animal ET sur l’humain</li>
-              <li>Compte rendu écrit en PDF avec outils pour prolonger l'effet du soin dans la matière</li>
-            </ul>
-            <a href="rendez-vous.html" class="btn btn--rdv mt-auto">Réserver la formule complète</a>
+            <div class="carte__contenu">
+              <span class="etiquette">Accompagnement Global</span>
+              <h3>Communication & Soin Énergétique</h3>
+              <p class="tarif__prix">155 €</p>
+              <span class="tarif__duree">⏱️ Formule complète Duo</span>
+              <ul style="text-align: left; margin-top: var(--espace-s);">
+                <li>Communication animale intuitive complète</li>
+                <li>Soin énergétique sur l'animal ET sur le gardien</li>
+                <li>Harmonisation des émotions et des énergies du binôme</li>
+                <li>Bilan complet en visio + compte rendu écrit PDF</li>
+              </ul>
+              <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer" class="btn btn--rdv mt-m">Réserver la formule complète</a>
+            </div>
           </article>
 
         </div>
+      </div>
+    </section>
+
+    <!-- Bandeau RDV -->
+    <section class="section section--sombre bandeau-rdv">
+      <div class="conteneur">
+        <h2>Envie de mieux comprendre votre compagnon ?</h2>
+        <p>Offrez-vous un moment d'écoute privilégié pour approfondir votre lien avec lui.</p>
+        <a class="btn btn--rdv" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
       </div>
     </section>
   </main>
 
   <footer class="pied">
-    <div class="conteneur centre">
-      <p>© Onystic Lumière – Consultations à distance sur rendez-vous uniquement.</p>
+    <div class="conteneur">
+      <div class="pied__colonnes">
+        <div>
+          <h3>Onystic Lumière</h3>
+          <p>Un accompagnement doux pour le cœur et l’âme.</p>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="communication-animale.html">Communication animale</a></li>
+            <li><a href="soins-energetiques.html">Soins énergétiques</a></li>
+            <li><a href="cartomancie.html">Cartomancie</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="pied__legal mb-0" style="max-width:none">© Onystic Lumière – Site créé avec douceur et bienveillance</p>
     </div>
   </footer>
 
+  <script>
+    const bouton = document.querySelector('.nav__bouton');
+    const menu = document.getElementById('menu');
+    bouton.addEventListener('click', () => {
+      const ouvert = menu.classList.toggle('ouvert');
+      bouton.setAttribute('aria-expanded', ouvert);
+    });
+  </script>
 </body>
 </html>

@@ -1,86 +1,241 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Cartomancie & Guidance – Onystic Lumière</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="entete">
     <div class="conteneur entete__interieur">
-      <a href="index.html" class="logo"><img src="images/logo.png" alt="Onystic Lumière Logo"></a>
-      <nav class="nav">
+      <a class="logo" href="index.html" aria-label="Aller à l'accueil">
+        <img src="logo.png" alt="Logo Onystic Lumière" style="height:50px; margin-right:10px;">
+        <span style="font-family:var(--police-titre);font-size:2.2rem;color:var(--brun);line-height:1">Onystic Lumière</span>
+      </a>
+      <button class="nav__bouton" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+      <nav class="nav" id="menu" aria-label="Menu principal">
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="communication-animale.html">Communication Animale</a></li>
-          <li><a href="soins-energetiques.html">Soins Énergétiques</a></li>
-          <li><a href="cartomancie.html" aria-current="page">Cartomancie</a></li>
-          <li><a href="tarifs.html">Tarifs</a></li>
-          <li><a href="rendez-vous.html" class="btn btn--rdv btn--petit">Rendez-vous</a></li>
+          <li><a href="avancement.html">Avancement</a></li>
+          <li class="nav__item--deroulant">
+            <a href="index.html#services" aria-current="page">Services</a>
+            <ul class="nav__sous-menu">
+              <li><a href="communication-animale.html">Communication animale</a></li>
+              <li><a href="soins-energetiques.html">Soins énergétiques</a></li>
+              <li><a href="cartomancie.html">Cartomancie</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#apropos">À propos</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a class="btn btn--rdv btn--petit" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero hero--page">
+    <!-- Hero Section -->
+    <section class="hero hero--page" style="background-image: url('photop.png');">
       <div class="conteneur">
         <h1>Cartomancie & Guidance Intuitive</h1>
-        <p class="slogan">« Une guidance bienveillante pour retrouver clarté, assurance et apaisement. »</p>
+        <p class="slogan">Une guidance bienveillante pour retrouver clarté, assurance et apaisement.</p>
       </div>
     </section>
 
+    <!-- Présentation détaillée -->
     <section class="section">
       <div class="conteneur duo">
         <div>
           <h2>Éclairer pour avancer en confiance</h2>
-          <p>Un tirage de cartes intuitif est un temps de pause pour éclairer votre chemin, apporter des réponses à vos questionnements actuels et vous aider à faire vos choix avec sérénité.</p>
+          <p>
+            Un tirage de cartes intuitif est un temps de pause dédié à la prise de recul. Il permet d'éclairer votre chemin, d'apporter des réponses à vos questionnements actuels et de vous aider à aborder vos décisions avec sérénité.
+          </p>
+          <p>
+            À travers les oracles et les tarots, Marine utilise ses ressentis pour mettre en lumière les blocages inconscients, révéler vos forces intérieures et vous offrir des clés de compréhension sur votre situation présente.
+          </p>
+          <p>
+            Chaque séance se déroule dans le respect total de votre liberté d'action et de votre discernement.
+          </p>
+          
+          <div class="encadre mt-m" style="border-left: 4px solid var(--olive); padding-left: 1rem; background: var(--fond-doux); padding-block: 0.8rem; border-radius: var(--rayon-s);">
+            <p style="margin-bottom: 0; font-style: italic; font-size: 0.95rem;">
+              <strong>Note importante :</strong> La cartomancie offre un éclairage intuitif et une guidance réflexive. Elle ne constitue ni une prédiction figeant l'avenir ni une vérité absolue, et chacun reste maître de ses choix.
+            </p>
+          </div>
         </div>
         <div>
-          <img src="images/cartomancie.jpg" alt="Tirage de Cartomancie">
+          <img src="carto.png" alt="Cartomancie et tirage d'oracles" style="border-radius:var(--rayon-m); box-shadow:var(--ombre);">
         </div>
       </div>
     </section>
 
+    <!-- Que peut vous apporter un tirage ? -->
     <section class="section section--douce">
       <div class="conteneur">
+        <div class="section__entete">
+          <h2>Que peut vous apporter une guidance ?</h2>
+          <p>Un accompagnement doux pour y voir plus clair dans votre parcours.</p>
+        </div>
         <div class="grille grille--2">
-
-          <article class="carte tarif">
-            <h3>Tirage Thématique</h3>
-            <p class="tarif__prix">35 €</p>
-            <span class="tarif__duree">⏱️ Durée : 30 à 45 min</span>
-            <ul style="text-align: left;">
-              <li>Tirage ciblé sur un domaine particulier (relationnel, pro, choix...)</li>
-              <li>Compte rendu en visio ou par appel téléphonique</li>
-            </ul>
-            <a href="rendez-vous.html" class="btn btn--rdv mt-auto">Réserver ce tirage</a>
+          
+          <article class="carte">
+            <div class="carte__contenu">
+              <span class="etiquette">Clarté</span>
+              <h3>Prendre du recul</h3>
+              <p>Mettre en lumière les éléments cachés d'une situation confuse (domaine professionnel, relationnel ou personnel) pour agir avec discernement.</p>
+            </div>
           </article>
 
-          <article class="carte tarif">
-            <span class="etiquette">Approfondi</span>
-            <h3>Tirage Général</h3>
-            <p class="tarif__prix">55 €</p>
-            <span class="tarif__duree">⏱️ Durée : 1h à 1h30</span>
-            <ul style="text-align: left;">
-              <li>Guidance complète et globale sur votre situation actuelle</li>
-              <li>Compte rendu en visio ou par appel téléphonique</li>
-            </ul>
-            <a href="rendez-vous.html" class="btn btn--rdv mt-auto">Réserver la guidance</a>
+          <article class="carte">
+            <div class="carte__contenu">
+              <span class="etiquette">Décision</span>
+              <h3>Éclairer un choix</h3>
+              <p>Explorer les différentes options qui s'offrent à vous face à une hésitation ou un carrefour de vie.</p>
+            </div>
+          </article>
+
+          <article class="carte">
+            <div class="carte__contenu">
+              <span class="etiquette">Énergie</span>
+              <h3>Identifier les blocages</h3>
+              <p>Comprendre ce qui freine votre élan actuel et découvrir les leviers à activer pour dépasser vos doutes.</p>
+            </div>
+          </article>
+
+          <article class="carte">
+            <div class="carte__contenu">
+              <span class="etiquette">Ancrage</span>
+              <h3>Confiance & Alignement</h3>
+              <p>Vous reconnecter à votre intuition profonde, retrouver de l'assurance et avancer en accord avec vos valeurs.</p>
+            </div>
           </article>
 
         </div>
+      </div>
+    </section>
+
+    <!-- Déroulement -->
+    <section class="section">
+      <div class="conteneur">
+        <div class="section__entete">
+          <h2>Comment se déroule la séance ?</h2>
+        </div>
+        <div class="grille">
+          
+          <div class="tarif" style="align-items: flex-start; text-align: left;">
+            <span style="font-size: 1.5rem; color: var(--orange); font-weight: 700;">01. Intention</span>
+            <h3 style="margin-top: 0.5rem;">Thématique ou globale</h3>
+            <p>Nous définissons la question ou le domaine que vous souhaitez explorer (relationnel, pro, projet...) ou optons pour un tirage d'ensemble.</p>
+          </div>
+
+          <div class="tarif" style="align-items: flex-start; text-align: left;">
+            <span style="font-size: 1.5rem; color: var(--orange); font-weight: 700;">02. Le Tirage</span>
+            <h3 style="margin-top: 0.5rem;">Lecture intuitive</h3>
+            <p>Marine tire les cartes et interprète les messages, symboles et ressentis perçus durant la consultation.</p>
+          </div>
+
+          <div class="tarif" style="align-items: flex-start; text-align: left;">
+            <span style="font-size: 1.5rem; color: var(--orange); font-weight: 700;">03. Restitution</span>
+            <h3 style="margin-top: 0.5rem;">Visio ou Téléphone</h3>
+            <p>La restitution se fait en direct lors d'un échange chaleureux en visio ou par appel téléphonique selon votre préférence.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarifs -->
+    <section class="section section--douce">
+      <div class="conteneur">
+        <div class="section__entete">
+          <h2>Tarifs des Guidances</h2>
+          <p>Choisissez la formule adaptée à votre questionnement.</p>
+        </div>
+        <div class="grille grille--2">
+
+          <article class="carte tarif">
+            <div class="carte__contenu">
+              <span class="etiquette">Ciblé</span>
+              <h3>Tirage Thématique</h3>
+              <p class="tarif__prix">35 €</p>
+              <span class="tarif__duree">⏱️ Durée : 30 à 45 min</span>
+              <ul style="text-align: left; margin-top: var(--espace-s);">
+                <li>Consultation axée sur une problématique ou un domaine précis</li>
+                <li>Tirage d'oracles et tarots intuitifs</li>
+                <li>Restitution en visio ou par appel téléphonique</li>
+              </ul>
+              <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer" class="btn btn--rdv mt-m">Réserver ce tirage</a>
+            </div>
+          </article>
+
+          <article class="carte tarif">
+            <div class="carte__contenu">
+              <span class="etiquette">Approfondi</span>
+              <h3>Tirage Général</h3>
+              <p class="tarif__prix">55 €</p>
+              <span class="tarif__duree">⏱️ Durée : 1h à 1h30</span>
+              <ul style="text-align: left; margin-top: var(--espace-s);">
+                <li>Guidance globale et approfondie de votre situation actuelle</li>
+                <li>Analyse des forces, des défis et des perspectives d'évolution</li>
+                <li>Restitution en visio ou par appel téléphonique</li>
+              </ul>
+              <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer" class="btn btn--rdv mt-m">Réserver la guidance</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bandeau RDV -->
+    <section class="section section--sombre bandeau-rdv">
+      <div class="conteneur">
+        <h2>Besoin de clarté sur votre parcours ?</h2>
+        <p>Offrez-vous un temps d'éclairage doux pour avancer en toute confiance.</p>
+        <a class="btn btn--rdv" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
       </div>
     </section>
   </main>
 
   <footer class="pied">
-    <div class="conteneur centre">
-      <p>© Onystic Lumière – Consultations à distance sur rendez-vous uniquement.</p>
+    <div class="conteneur">
+      <div class="pied__colonnes">
+        <div>
+          <h3>Onystic Lumière</h3>
+          <p>Un accompagnement doux pour le cœur et l’âme.</p>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="communication-animale.html">Communication animale</a></li>
+            <li><a href="soins-energetiques.html">Soins énergétiques</a></li>
+            <li><a href="cartomancie.html">Cartomancie</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="pied__legal mb-0" style="max-width:none">© Onystic Lumière – Site créé avec douceur et bienveillance</p>
     </div>
   </footer>
 
+  <script>
+    const bouton = document.querySelector('.nav__bouton');
+    const menu = document.getElementById('menu');
+    bouton.addEventListener('click', () => {
+      const ouvert = menu.classList.toggle('ouvert');
+      bouton.setAttribute('aria-expanded', ouvert);
+    });
+  </script>
 </body>
 </html>
