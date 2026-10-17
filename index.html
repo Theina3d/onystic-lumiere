@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Onystic Lumière – Un accompagnement doux pour le cœur et l’âme</title>
+  <title>Onystic Lumière – Accompagnement doux pour le cœur et l'âme</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -11,346 +11,409 @@
 </head>
 <body>
 
-<!-- ============ EN-TÊTE / BANNIÈRE ============ -->
-<header class="entete">
-  <div class="conteneur entete__interieur">
-    <!-- Logo image + texte -->
-    <a class="logo" href="index.html" style="font-family:var(--police-titre);font-size:2.2rem;color:var(--brun);line-height:1">
-      <img src="logo.png" alt="Logo Onystic Lumière" style="height:50px; margin-right:10px;">
-      Onystic Lumière
-    </a>
-    <button class="nav__bouton" aria-expanded="false" aria-controls="menu">☰ Menu</button>
-    <nav class="nav" id="menu" aria-label="Menu principal">
-      <ul>
-        <li><a href="index.html" aria-current="page">Accueil</a></li>
-        <li><a href="avancement.html" >Avancement</a></li>
-        <li class="nav__item--deroulant">
-          <a href="#services">Services</a>
-          <ul class="nav__sous-menu">
-            <li><a href="communication-animale.html">Communication animale</a></li>
-            <li><a href="soins-energetiques.html">Soins énergétiques</a></li>
-            <li><a href="cartomancie.html">Cartomancie</a></li>
-          </ul>
-        </li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a class="btn btn--rdv" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main id="haut">
-
-<!-- ============ HERO (IMAGE DE FOND TRANSPARENTE) ============ -->
-<!-- Modifie 'images/fond-hero.jpg' par le lien de ton image de fond -->
-<section class="hero" style="background-image: url('photop.png');">
-  <div class="conteneur">
-    <h1>Onystic Lumière</h1>
-    <p class="slogan">Un accompagnement doux pour le cœur et l’âme</p>
-    <p>À l'écoute de votre animal. À vos côtés. Pour un lien plus fort, plus vrai, plus serein.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a class="btn btn--rdv btn--petit" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
-      <a class="btn btn--contour" href="#services">Découvrir mes services</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- Section Qui je suis -->
-<section id="a-propos" class="section">
-  <div class="conteneur">
-    
-    <!-- 1. Titre principal centré en haut -->
-    <div class="section__entete">
-      <h2>Qui je suis</h2>
-    </div>
-
-    <!-- 2. Grille principale à deux colonnes -->
-    <div class="duo" style="align-items: start;">
-      
-      <!-- Colonne Gauche : Photo + Citation/Signature + Note avec bordure olive -->
-      <div>
-        <img src="photop.png" alt="Marine avec son chien - Onystic Lumière" style="border-radius: var(--rayon-m); box-shadow: var(--ombre); margin-bottom: var(--espace-s);">
-        
-        <!-- Carte de citation / signature -->
-        <div class="carte centre" style="padding: var(--espace-s); margin-bottom: var(--espace-s);">
-          <p class="slogan" style="margin-bottom: var(--espace-xs);">
-            « Les animaux nous offrent ce que le cœur humain cherche parfois à retrouver. »
-          </p>
-          <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 0;">
-            Avec respect, douceur et amour du vivant,<br>
-            <strong>— Marine</strong>
-          </p>
-        </div>
-
-        <!-- Note d'avertissement avec bordure olive -->
-        <p style="font-size: 0.9rem; font-style: italic; opacity: 0.9; border-left: 4px solid var(--olive); padding-left: 0.8rem; margin-bottom: 0;">
-          Toutes mes pratiques reposent sur mes intuitions, mes ressentis et mes perceptions. Elles ne constituent ni des vérités absolues, ni des garanties de résultat, et chacun reste libre d’accueillir les éléments transmis selon son propre discernement.
-        </p>
-      </div>
-
-      <!-- Colonne Droite : Première partie du texte -->
-      <div>
-        <p>
-          Depuis toujours, je suis profondément sensible aux liens qui nous unissent aux autres, à nos émotions et à tout ce qui peut parfois se ressentir au-delà des mots.
-        </p>
-
-        <p>
-          J’ai créé Onystic Lumière avec l’envie profonde d’offrir un espace d’écoute, de connexion et de compréhension, où chacun peut prendre le temps de se reconnecter à soi et aux êtres qui occupent une place importante dans sa vie.
-        </p>
-
-        <p>
-          Après une formation de 9 mois en communication animale et soins énergétiques holistiques, j’ai choisi de mettre ma sensibilité, mes ressentis et mes connaissances au service d’un accompagnement doux, respectueux et bienveillant.
-        </p>
-
-        <p>
-          Aujourd’hui, je vous accompagne à travers différentes pratiques : communication intuitive avec les animaux, les bébés, les futurs bébés et les jeunes enfants, communication avec les défunts, soins énergétiques holistiques et cartomancie.
-        </p>
-
-        <p>
-          Chacune de ces pratiques est proposée comme un espace d’écoute et de connexion, permettant d’accueillir les ressentis, les émotions et les messages qui peuvent se présenter, toujours dans le respect de chacun et de son propre chemin.
-        </p>
-      </div>
-
-    </div>
-
-    <!-- 3. Partie finale centrée sur une seule colonne -->
-    <div class="colonne-centree mt-l">
-      <p>
-        Onystic Lumière est avant tout un lieu où l’on peut ralentir, écouter autrement et porter un regard différent sur soi, sur ses relations et sur les êtres qui nous entourent.
-      </p>
-
-      <p>
-        Mon souhait est de vous accompagner avec douceur et bienveillance, que vous cherchiez à mieux comprendre votre compagnon, à créer une connexion différente avec votre enfant, à traverser un deuil, à retrouver davantage d’équilibre grâce aux soins énergétiques ou simplement à vous offrir un moment de réflexion à travers les cartes.
-      </p>
-
-      <div class="mt-m">
-        <a href="contact.html" class="btn btn--contour">Me contacter</a>      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============ SERVICES ============ -->
-<section class="section section--douce" id="services">
-  <div class="conteneur">
-    <div class="section__entete">
-      <h2>Mes accompagnements</h2>
-      <p>Chaque séance est unique, chaque échange est une rencontre du cœur.</p>
-    </div>
-    
-    <div class="grille">
-      <!-- Communication Animale -->
-      <article class="carte">
-        <img class="carte__image" src="com_a.png" alt="Communication animale">
-        <div class="carte__contenu">
-          <span class="etiquette">Animaux</span>
-          <h3>Communication animale</h3>
-          <p>Permettre une meilleure compréhension entre vous et votre animal dans un échange guidé par la bienveillance.</p>
-          <a class="btn btn--petit" href="communication-animale.html">En savoir plus</a>
-        </div>
-      </article>
-
-      
-      <!-- Soins Énergétiques -->
-      <article class="carte">
-        <img class="carte__image" src="soins.png" alt="Soins énergétiques">
-        <div class="carte__contenu">
-          <span class="etiquette">Humains & Animaux</span>
-          <h3>Soins énergétiques</h3>
-          <p>Une parenthèse de douceur pour libérer les tensions et retrouver une énergie plus apaisée.</p>
-          <a class="btn btn--petit" href="soins-energetiques.html">En savoir plus</a>
-        </div>
-      </article>
-
-      <!-- Cartomancie -->
-      <article class="carte">
-        <img class="carte__image" src="carto.png" alt="Cartomancie">
-        <div class="carte__contenu">
-          <span class="etiquette">Guidance</span>
-          <h3>Cartomancie</h3>
-          <p>Un éclairage bienveillant pour vous guider avec douceur dans les périodes de questionnements.</p>
-          <a class="btn btn--petit" href="cartomancie.html">En savoir plus</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ BANDEAU RDV & CONTACT ============ -->
-<section class="section section--sombre bandeau-rdv">
-  <div class="conteneur">
-    <h2>Prêt(e) à nourrir ce lien précieux ?</h2>
-    <p>Chaque séance est pensée comme un espace sécurisant, respectueux et profond.</p>
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
-      <a class="btn btn--rdv" href="#contact">Me contacter</a>
-      <a class="btn btn--contour" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FAQ ET AVIS CLIENTS ============ -->
-<section class="section section-faq-avis">
-  <div class="conteneur grille grille--2">
-    
-    <!-- Colonne 1 : FAQ -->
-    <div class="colonne-centree">
-      <h2>Questions fréquentes</h2>
-      <div class="faq">
-        <details open>
-          <summary>Les séances se déroulent-elles à distance ?</summary>
-          <p>Oui, les consultations sont réalisées à distance, sur rendez-vous uniquement. La communication animale et les soins énergétiques fonctionnent parfaitement à partir d'une photo et d'un temps d'échange.</p>
-        </details>
-        <details>
-          <summary>Comment se déroule un compte rendu ?</summary>
-          <p>Explication du compte rendu...</p>
-        </details>
-        <details>
-          <summary>Est-ce adapté aux humains comme aux animaux ?</summary>
-          <p>Explication de la prise en charge...</p>
-        </details>
-      </div>
-    </div>
-
-    <!-- Colonne 2 : Carrousel d'Avis -->
-    <div class="colonne-centree">
-      <h2>Avis clients</h2>
-      
-      <div class="carrousel-avis">
-        <!-- Cartes d'avis -->
-        <article class="avis avis--actif">
-          <p class="avis__texte">« Une séance de communication animale bluffante de justesse. Merci pour ta douceur et tes réponses précieuses ! »</p>
-          <p class="avis__auteur">— Sophie & Moka</p>
-        </article>
-
-        <article class="avis">
-          <p class="avis__texte">« Le soin énergétique m'a procuré un apaisement immédiat. Une très belle expérience que je recommande vivement. »</p>
-          <p class="avis__auteur">— Camille</p>
-        </article>
-
-        <article class="avis">
-          <p class="avis__texte">« Une expérience magique et réconfortante. Merci infiniment pour ton écoute. »</p>
-          <p class="avis__auteur">— Lucile & Orion</p>
-        </article>
-
-        <!-- Navigation carrousel (Flèches) -->
-        <div class="nav-carrousel">
-          <button type="button" class="btn-fleche" id="avis-prev" aria-label="Avis précédent">❮</button>
-          <button type="button" class="btn-fleche" id="avis-next" aria-label="Avis suivant">❯</button>
-        </div>
-      </div>
-
-      <!-- Bouton Laisser un avis -->
-      <div class="mt-m">
-        <a href="https://forms.gle/u1TMVAT9fyMTPCSEA" target="_blank" rel="noopener noreferrer" class="btn btn--contour btn--petit">
-          Laisser un avis
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ============ SECTION CONTACT & INFOS ============ -->
-<section class="section-contact-duo" id="contact">
-  <div class="conteneur-duo">
-    
-    <!-- Carte 1 : Informations & Coordonnées -->
-    <div class="carte-contact">
-      <h3>Onystic Lumière</h3>
-      <p class="description-soft">Un accompagnement doux pour le cœur et l'âme.</p>
-      
-      <div class="groupe-infos">
-        <p>📞 06.03.29.59.08</p>
-        <p>✉️ <a href="mailto:onysticlumiere@gmail.com">onysticlumiere@gmail.com</a></p>        
-        <p class="lien-instagram">
-          <a href="https://www.instagram.com/onystic_lumiere" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            <span> @onystic_lumiere</span>
-          </a>
-        </p>
-      </div>
-
-      <div class="groupe-infos">
-        <h4>Services</h4>
+  <!-- En-tête / Navigation -->
+  <header class="entete">
+    <div class="conteneur entete__interieur">
+      <a class="logo" href="index.html" aria-label="Aller à l'accueil">
+        <img src="images/logo.png" alt="Logo Onystic Lumière">
+        <span style="font-family:var(--police-titre);font-size:2.2rem;color:var(--brun);line-height:1">Onystic Lumière</span>
+      </a>
+      <button class="nav__bouton" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+      <nav class="nav" id="menu" aria-label="Menu principal">
         <ul>
-          <li><a href="communication-animale.html">Communication animale</a></li>
-          <li><a href="soins-energetiques.html">Soins énergétiques</a></li>
-          <li><a href="cartomancie.html">Cartomancie</a></li>
-        </ul>
-      </div>
-
-      <div class="groupe-infos">
-        <h4>Informations</h4>
-        <ul>
+          <li><a href="index.html" aria-current="page">Accueil</a></li>
+          <li class="nav__item--deroulant">
+            <a href="#prestations">Services</a>
+            <ul class="nav__sous-menu">
+              <li><a href="communication-animale.html">Communication animale</a></li>
+              <li><a href="communication-bebe.html">Communication bébés & enfants</a></li>
+              <li><a href="communication-defunts.html">Communication défunts</a></li>
+              <li><a href="soins-energetiques.html">Soins énergétiques</a></li>
+              <li><a href="cartomancie.html">Cartomancie</a></li>
+            </ul>
+          </li>
+          <li><a href="#apropos">À propos</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#a-propos">À propos</a></li>
-          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a class="btn btn--rdv btn--petit" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer">Prendre RDV</a></li>
         </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Bannière d'accueil -->
+    <section class="hero" style="background-image: url('images/photop.png');">
+      <div class="conteneur">
+        <img src="images/logo.png" alt="Logo Onystic Lumière" style="max-width: 180px; margin-inline: auto; margin-bottom: var(--espace-s);">
+        <h1>Onystic Lumière</h1>
+        <p class="slogan">« Un accompagnement doux pour le cœur et l'âme »</p>
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer" class="btn btn--rdv mt-m">Prendre rendez-vous</a>
+      </div>
+    </section>
+
+    <!-- Prestations (Cartes alignées) -->
+    <section id="prestations" class="section">
+      <div class="conteneur">
+        <div class="section__entete">
+          <h2>Mes Prestations</h2>
+          <p class="slogan">Des accompagnements intuitifs et personnalisés à distance</p>
+        </div>
+
+        <div class="grille">
+
+          <!-- Carte 1: Communication Animale -->
+          <article class="carte">
+            <img src="images/CAChien.png" alt="Communication Animale" class="carte__image--carre">
+            <div class="carte__contenu">
+              <span class="etiquette">Connexion & Écoute</span>
+              <h3>Communication Animale</h3>
+              <p>Permettre une meilleure compréhension entre vous et votre animal dans un échange guidé par la bienveillance.</p>
+              <a href="communication-animale.html" class="btn btn--contour">Découvrir le service</a>
+            </div>
+          </article>
+
+          <!-- Carte 2: Communication Bébés & Enfants -->
+          <article class="carte">
+            <img src="images/CBPres.png" alt="Communication Bébés & Enfants" class="carte__image--carre">
+            <div class="carte__contenu">
+              <span class="etiquette">Nouveau-nés & Grossesse</span>
+              <h3>Communication Bébés</h3>
+              <p>Un espace de connexion pour accueillir les ressentis et messages de votre enfant, même avant les mots.</p>
+              <a href="communication-bebe.html" class="btn btn--contour">Découvrir le service</a>
+            </div>
+          </article>
+
+          <!-- Carte 3: Communication Défunts -->
+          <article class="carte">
+            <img src="images/CD1.png" alt="Communication avec les Défunts" class="carte__image--carre">
+            <div class="carte__contenu">
+              <span class="etiquette">Recueillement & Apaisement</span>
+              <h3>Communication Défunts</h3>
+              <p>Offrir un temps de connexion, d'écoute et de douceur avec un être cher qui vous manque.</p>
+              <a href="communication-defunts.html" class="btn btn--contour">Découvrir le service</a>
+            </div>
+          </article>
+
+          <!-- Carte 4: Soins Énergétiques -->
+          <article class="carte">
+            <img src="images/SEH.png" alt="Soins Énergétiques" class="carte__image--carre">
+            <div class="carte__contenu">
+              <span class="etiquette">Harmonie & Apaisement</span>
+              <h3>Soin Énergétique</h3>
+              <p>Une parenthèse de douceur pour libérer les tensions et retrouver une énergie plus apaisée.</p>
+              <a href="soins-energetiques.html" class="btn btn--contour">Découvrir le service</a>
+            </div>
+          </article>
+
+          <!-- Carte 5: Cartomancie -->
+          <article class="carte">
+            <img src="images/CTirage.png" alt="Cartomancie & Guidance" class="carte__image--carre">
+            <div class="carte__contenu">
+              <span class="etiquette">Guidance & Clarté</span>
+              <h3>Cartomancie</h3>
+              <p>Un éclairage bienveillant pour vous guider avec douceur dans les périodes de questionnement.</p>
+              <a href="cartomancie.html" class="btn btn--contour">Découvrir le service</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Qui Je Suis -->
+    <section id="apropos" class="section section--douce">
+      <div class="conteneur">
+        
+        <div class="section__entete">
+          <h2>Qui je suis</h2>
+        </div>
+
+        <div class="duo" style="align-items: start;">
+          <div>
+            <img src="images/photop.png" alt="Marine avec son chien - Onystic Lumière">
+            
+            <div class="carte centre mt-s" style="padding: var(--espace-s);">
+              <p class="slogan" style="margin-bottom: var(--espace-xs);">
+                « Les animaux nous offrent ce que le cœur humain cherche parfois à retrouver. »
+              </p>
+              <p style="font-style: italic; font-size: 0.95rem; margin-bottom: 0;">
+                Avec respect, douceur et amour du vivant,<br>
+                <strong>— Marine</strong>
+              </p>
+            </div>
+
+            <p style="font-size: 0.9rem; font-style: italic; opacity: 0.9; border-left: 4px solid var(--olive); padding-left: 0.8rem; margin-top: var(--espace-s);">
+              Toutes mes pratiques reposent sur mes intuitions, mes ressentis et mes perceptions. Elles ne constituent ni des vérités absolues, ni des garanties de résultat, et chacun reste libre d’accueillir les éléments transmis selon son propre discernement.
+            </p>
+          </div>
+
+          <div>
+            <p>Depuis toujours, je suis profondément sensible aux liens qui nous unissent aux autres, à nos émotions et à tout ce qui peut parfois se ressentir au-delà des mots.</p>
+            <p>J’ai créé Onystic Lumière avec l’envie profonde d’offrir un espace d’écoute, de connexion et de compréhension, où chacun peut prendre le temps de se reconnecter à soi et aux êtres qui occupent une place importante dans sa vie.</p>
+            <p>Après une formation de 9 mois en communication animale et soins énergétiques holistiques, j’ai choisi de mettre ma sensibilité, mes ressentis et mes connaissances au service d’un accompagnement doux, respectueux et bienveillant.</p>
+            <p>Aujourd’hui, je vous accompagne à travers différentes pratiques : communication intuitive avec les animaux, les bébés, les futurs bébés et les jeunes enfants, communication avec les défunts, soins énergétiques holistiques et cartomancie.</p>
+            <p>Chacune de ces pratiques est proposée comme un espace d’écoute et de connexion, permettant d’accueillir les ressentis, les émotions et les messages qui peuvent se présenter, toujours dans le respect de chacun et de son propre chemin.</p>
+          </div>
+        </div>
+
+        <div class="colonne-centree mt-l">
+          <p>Onystic Lumière est avant tout un lieu où l’on peut ralentir, écouter autrement et porter un regard différent sur soi, sur ses relations et sur les êtres qui nous entourent.</p>
+          <p>Mon souhait est de vous accompagner avec douceur et bienveillance, que vous cherchiez à mieux comprendre votre compagnon, à créer une connexion différente avec votre enfant, à traverser un deuil, à retrouver davantage d’équilibre grâce aux soins énergétiques ou simplement à vous offrir un moment de réflexion à travers les cartes.</p>
+          <div class="mt-m">
+            <a href="#contact" class="btn btn--contour">Me contacter</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Avis & Témoignages (Dynamique via avis.js) -->
+    <section id="avis" class="section">
+      <div class="conteneur">
+        <div class="section__entete">
+          <h2>Avis & Témoignages</h2>
+          <p class="slogan">Vos retours sont précieux et témoignent des belles transformations vécues.</p>
+        </div>
+
+        <!-- Conteneur chargé par avis.js -->
+        <div class="carrousel-defilement" id="carrouselAvis" data-service="TOUS">
+          <!-- Les avis validés issus du Sheet s'insèrent ici automatiquement -->
+        </div>
+
+        <div class="commandes-carrousel">
+          <button class="btn-fleche" id="btnGauche" aria-label="Avis précédent">←</button>
+          <button class="btn-fleche" id="btnDroite" aria-label="Avis suivant">→</button>
+        </div>
+
+        <div class="mt-l centre">
+          <a href="https://forms.gle/gNhPTB7aHmn2DgVs8" target="_blank" rel="noopener noreferrer" class="btn btn--rdv">
+            Laisser un avis
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section--douce">
+      <div class="conteneur colonne-centree">
+        <div class="section__entete">
+          <h2>Foire Aux Questions</h2>
+          <p class="slogan">« Retrouver des réponses claires et bienveillantes pour vous guider. »</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Qu'est-ce que la communication intuitive et à qui s'adresse-t-elle ?</summary>
+            <p>La communication intuitive est une approche qui permet d'entrer en connexion avec les ressentis, les émotions et les messages d'un être, au-delà de la communication verbale.</p>
+            <p>Je propose des communications intuitives avec les animaux, les enfants et les défunts, dans une démarche d'écoute, de bienveillance et de respect.</p>
+          </details>
+
+          <details>
+            <summary>Comment se déroule une communication intuitive avec un animal, un enfant ou un défunt ?</summary>
+            <p>Avant la séance, vous me transmettez les informations nécessaires ainsi que vos questions ou intentions.</p>
+            <p>Je me mets ensuite à l'écoute de ce qui se présente à moi : ressentis, émotions, images, sensations ou messages. La communication vous est ensuite restituée de manière claire et fidèle à ce qui a été perçu.</p>
+            <p>Chaque communication est unique et se déroule dans le respect de la personne ou de l'être concerné.</p>
+          </details>
+
+          <details>
+            <summary>Les communications intuitives peuvent-elles être réalisées à distance ?</summary>
+            <p>Oui. Les communications intuitives peuvent être réalisées entièrement à distance. La distance géographique n'est pas un obstacle à ma pratique.</p>
+            <p>Vous n'avez donc pas besoin de vous déplacer ni d'être présent(e) pendant la séance.</p>
+          </details>
+
+          <details>
+            <summary>Comment se déroule un soin énergétique pour un humain ou un animal ?</summary>
+            <p>Le soin commence par un échange afin de comprendre votre demande et vos besoins du moment.</p>
+            <p>Je réalise ensuite le soin énergétique à distance, dans une approche globale, en travaillant notamment sur la circulation et l'équilibre énergétique. À la fin du soin, je vous transmets mes ressentis ainsi que les éléments importants perçus pendant la séance, sous forme d'un PDF personnalisé.</p>
+            <p>Pour les animaux, le soin énergétique est réalisé uniquement à la suite d'une communication animale, car le soin est effectué en effet miroir avec leur(s) humain(s).</p>
+          </details>
+
+          <details>
+            <summary>Que peut apporter un soin énergétique ?</summary>
+            <p>Un soin énergétique est avant tout un moment d'écoute, de détente et de reconnexion à soi. Il peut accompagner différentes périodes de vie, lorsque l'on ressent un besoin d'apaisement, de recentrage ou de retrouver un meilleur équilibre intérieur.</p>
+            <p><em>Note : Les soins énergétiques ne remplacent pas un suivi médical ou vétérinaire.</em></p>
+          </details>
+
+          <details>
+            <summary>Comment se déroule une séance de cartomancie et quelles questions peut-on poser ?</summary>
+            <p>La séance commence par un échange autour de votre situation et de ce que vous souhaitez éclairer. Les cartes permettent d'explorer une situation, vos ressentis, les différentes possibilités et les énergies du moment.</p>
+            <p>La cartomancie n'a pas pour objectif de décider à votre place, mais de vous offrir un autre regard et des pistes de réflexion.</p>
+          </details>
+
+          <details>
+            <summary>Comment savoir quelle prestation choisir selon ma situation ?</summary>
+            <p>Chaque prestation répond à une intention différente 
+              La communication intuitive permet de chercher à comprendre et de recevoir des messages d’un animal, d’un enfant ou d’un défunt.
+Le soin énergétique s’adresse davantage à un besoin de détente, de recentrage et d’harmonisation énergétique, pour les humains comme pour les animaux.
+La cartomancie permet d’apporter un éclairage sur une situation, une question ou un choix, et d’explorer différentes possibilités.
+Si vous hésitez entre plusieurs prestations, vous pouvez également me contacter afin que nous puissions déterminer ensemble celle qui correspond le mieux à votre demande.
+            </p>
+            <a href="#contact" class="btn btn--contour">Me contacter</a>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Contact Style Féérique & Doux -->
+<section id="contact" class="section-contact-duo">
+  <div class="conteneur conteneur-duo">
+    
+    <!-- Gauche : Message & Icônes -->
+    <div class="contact-gauche">
+      <h2>ME CONTACTER</h2>
+      <p class="slogan-script">Prenons un moment pour échanger ♡</p>
+      
+      <p class="description-contact">
+        Une question, un besoin d'accompagnement ou simplement l'envie d'échanger ?<br>
+        Je suis à votre écoute et je vous répondrai avec bienveillance dans les plus brefs délais.
+      </p>
+
+      <div class="icones-valeurs">
+        <div class="item-valeur">
+          <div class="cercle-icone">✉️</div>
+          <span>Écoute</span>
+        </div>
+        <div class="item-valeur">
+          <div class="cercle-icone">🐾</div>
+          <span>Bienveillance</span>
+        </div>
+        <div class="item-valeur">
+          <div class="cercle-icone">🪷</div>
+          <span>Harmonie</span>
+        </div>
+        <div class="item-valeur">
+          <div class="cercle-icone">🌙</div>
+          <span>Sérénité</span>
+        </div>
       </div>
     </div>
 
-    <!-- Carte 2 : Formulaire de contact -->
-    <div class="carte-contact">
-      <div class="entete-form">
-        <h2>Me contacter</h2>
-        <p>Envie d'en savoir plus ou de réserver une séance ? Je serai ravie d'échanger avec vous.</p>
-      </div>
+    <!-- Droite : Formulaire sur Fond Doux -->
+    <div class="contact-droite">
+      <h3>Écrivez-moi</h3>
 
-      <form class="formulaire-contact" onsubmit="return false">
-        <div class="champ">
-          <label for="prenom">Votre prénom</label>
-          <input type="text" id="prenom" placeholder="Votre prénom">
+      <form action="https://api.web3forms.com/submit" method="POST" class="formulaire-elegant">
+        <input type="hidden" name="access_key" value="VOTRE_ACCESS_KEY_ICI">
+        <input type="hidden" name="subject" value="Nouveau message - Onystic Lumière">
+        <input type="checkbox" name="botcheck" style="display:none;">
+
+        <!-- 2 Champs côte à côte (Nom & Email) -->
+        <div class="grille-champs-2">
+          <div class="champ-icone">
+            <span class="icone-champ">👤</span>
+            <input type="text" name="nom" required placeholder="Nom / Prénom">
+          </div>
+          <div class="champ-icone">
+            <span class="icone-champ">✉️</span>
+            <input type="email" name="email" required placeholder="Adresse e-mail">
+          </div>
         </div>
 
-        <div class="champ">
-          <label for="email">Votre email</label>
-          <input type="email" id="email" placeholder="votre.email@exemple.com">
-        </div>
-
-        <div class="champ">
-          <label for="telephone">Votre Téléphone</label>
-          <input type="tel" id="telephone" placeholder="votre nº de téléphone">
-        </div>
-
-        <div class="champ">
-          <label for="service-select">Service souhaité</label>
-          <select id="service-select">
-            <option>Communication animale</option>
-            <option>Soins énergétiques</option>
-            <option>Cartomancie / Guidance</option>
+        <!-- Sujet -->
+        <div class="champ-icone">
+          <span class="icone-champ">🌿</span>
+          <select name="service" required>
+            <option value="" disabled selected>Sujet de votre demande...</option>
+            <option value="Communication Animale">Communication Animale</option>
+            <option value="Communication Bébés">Communication Bébés & Enfants</option>
+            <option value="Communication Défunts">Communication Défunts</option>
+            <option value="Soin Énergétique">Soin Énergétique</option>
+            <option value="Cartomancie">Cartomancie & Guidance</option>
+            <option value="Autre demande">Autre demande</option>
           </select>
         </div>
 
-        <div class="champ">
-          <label for="message">Votre message</label>
-          <textarea id="message" placeholder="Expliquez-moi vos besoins ou vos questions..."></textarea>
+        <!-- Message -->
+        <div class="champ-icone">
+          <span class="icone-champ">✏️</span>
+          <textarea name="message" required placeholder="Votre message..."></textarea>
         </div>
 
-        <button type="button" class="btn btn--rdv">Envoyer</button>
+        <!-- Bouton d'envoi -->
+        <button type="submit" class="btn btn--rdv mt-s" style="width: 100%;">
+          Envoyer mon message ♡
+        </button>
       </form>
+
+      <p class="message-fin-form">
+        « Au plaisir de vous accompagner sur votre chemin d'harmonie et de connexion. »
+      </p>
     </div>
 
   </div>
 </section>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur">
+      <div class="centre mb-m">
+        <p class="slogan" style="color: var(--peche); font-size: 1.6rem;">« Nourrir le lien si précieux qui nous unit au vivant. »</p>
+      </div>
+
+      <div class="pied__colonnes">
+        <div>
+          <h3>Onystic Lumière</h3>
+          <p>Accompagnements humains & animaux.<br>Consultations à distance sur rendez-vous.</p>
+          <p><a href="mailto:onysticlumiere@gmail.com">onysticlumiere@gmail.com</a></p>
+            <!-- Instagram -->
+<a href="https://instagram.com/onystic_lumiere" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--peche); margin-bottom: 0.5rem;">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+  <span>Instagram : @onystic_lumiere</span>
+</a>
+
+<!-- Facebook -->
+<a href="https://www.facebook.com/profile.php?id=61582229429584" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--peche); margin-bottom: 0.5rem;">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+  <span>Facebook : Onystic Lumière</span>
+</a>
+
+<!-- TikTok -->
+<a href="https://www.tiktok.com/@onystic_lumiere" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--peche);">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+  <span>TikTok : @onystic_lumiere</span>
+</a>
 
 
-<!-- ============ PIED DE PAGE ============ -->
-<footer class="pied">
-  <div class="conteneur">
-    <p class="pied__legal mb-0" style="max-width:none">© Onystic Lumière – Site créé avec douceur et bienveillance</p>
-  </div>
-</footer>
 
-<script>
-  const bouton = document.querySelector('.nav__bouton');
-  const menu = document.getElementById('menu');
-  bouton.addEventListener('click', () => {
-    const ouvert = menu.classList.toggle('ouvert');
-    bouton.setAttribute('aria-expanded', ouvert);
-  });
-</script>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="communication-animale.html">Communication animale</a></li>
+            <li><a href="communication-bebe.html">Communication bébés & enfants</a></li>
+            <li><a href="communication-defunts.html">Communication défunts</a></li>
+            <li><a href="soins-energetiques.html">Soins énergétiques</a></li>
+            <li><a href="cartomancie.html">Cartomancie</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Informations</h3>
+          <ul>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="mentions-legales.html">Informations Légales & CGV</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pied__legal">
+        <p>© Onystic Lumière – Tous droits réservés | Site créé avec douceur et bienveillance</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Menu Mobile -->
+  <script>
+    const bouton = document.querySelector('.nav__bouton');
+    const menu = document.getElementById('menu');
+    bouton.addEventListener('click', () => {
+      const ouvert = menu.classList.toggle('ouvert');
+      bouton.setAttribute('aria-expanded', ouvert);
+    });
+  </script>
+
+  <!-- Chargeur d'avis dynamique (Google Sheets) -->
+  <script src="avis.js"></script>
 </body>
 </html>

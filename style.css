@@ -11,6 +11,7 @@
    6. Pied de page (Footer)
    7. Utilitaires
    8. Responsive & Accessibilité
+   9. Correctifs Carrousel & Alignement des Cartes
    ===================================================================== */
 
 
@@ -154,8 +155,8 @@ hr {
 .grille {
   display: grid;
   gap: var(--espace-m);
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: stretch;
 }
 .grille--2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
 
@@ -345,6 +346,7 @@ hr {
 .carte {
   display: flex;
   flex-direction: column;
+  height: 100%;
   background: var(--blanc);
   border: 1px solid var(--peche);
   border-radius: var(--rayon-m);
@@ -356,7 +358,14 @@ hr {
   transform: translateY(-4px);
   box-shadow: 0 14px 36px rgba(102, 65, 43, 0.18);
 }
-.carte__image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+
+.carte__image--carre {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-bottom: 1px solid var(--peche);
+}
+
 .carte__contenu {
   display: flex;
   flex-direction: column;
@@ -364,7 +373,10 @@ hr {
   padding: var(--espace-m);
 }
 .carte__contenu p { flex: 1; }
-.carte__contenu .btn { align-self: flex-start; }
+.carte__contenu .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
 
 .etiquette {
   display: inline-block;
@@ -398,7 +410,7 @@ hr {
 .tarif__duree { font-size: var(--taille-petit); margin-bottom: var(--espace-s); }
 
 /* ---------- Avis & Carrousel ---------- */
-.avis {
+.carte.avis {
   position: relative;
   margin: 0;
   padding: var(--espace-m);
@@ -424,48 +436,57 @@ hr {
   color: var(--orange);
 }
 
-.carrousel-avis {
-  position: relative;
-  width: 100%;
-  max-width: 450px;
+.carrousel-defilement {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: var(--espace-m);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-block: var(--espace-s);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
 
-.carrousel-avis .avis {
+.carrousel-defilement::-webkit-scrollbar {
   display: none;
-  width: 100%;
 }
 
-.carrousel-avis .avis.avis--actif {
-  display: block;
+.carrousel-item {
+  flex: 0 0 min(330px, 85vw);
+  scroll-snap-align: center;
 }
 
-.nav-carrousel {
+.carrousel-item .carte.avis {
+  height: 100%;
+}
+
+.commandes-carrousel {
   display: flex;
+  justify-content: center;
   gap: var(--espace-s);
-  margin-top: var(--espace-s);
+  margin-top: var(--espace-m);
 }
 
 .btn-fleche {
   background: var(--blanc);
   border: 1px solid var(--peche);
   color: var(--brun);
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
-  transition: background var(--transition), border-color var(--transition);
+  font-size: 1.1rem;
+  box-shadow: var(--ombre);
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
 }
 
 .btn-fleche:hover {
   background: var(--peche);
   border-color: var(--caramel);
+  transform: scale(1.05);
 }
 
 /* ---------- FAQ ---------- */
@@ -503,150 +524,188 @@ hr {
 
 
 /* =====================================================================
-   5. SECTION CONTACT DUO
+   5. SECTION CONTACT STYLE ONYSTIC LUMIÈRE
    ===================================================================== */
 .section-contact-duo {
   padding-block: var(--espace-xl);
+  background: var(--fond-doux);
 }
 
 .conteneur-duo {
   max-width: var(--largeur-max);
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: var(--espace-l);
-  align-items: stretch;
-}
-
-/* Carte Gauche (Fond Marron Chaleureux) */
-.carte-contact:first-child {
-  flex: 0 0 40%;
-  background-color: var(--brun);
-  color: var(--peche);
-  border-radius: var(--rayon-m);
-  padding: var(--espace-l);
-  box-shadow: var(--ombre);
-  display: flex;
-  flex-direction: column;
-  gap: var(--espace-m);
-}
-
-.carte-contact:first-child h3 {
-  color: var(--blanc);
-  font-family: var(--police-titre);
-  font-size: clamp(2rem, 1.5rem + 1.5vw, 2.5rem);
-  font-weight: 400;
-  margin-bottom: 0.2rem;
-}
-
-.carte-contact:first-child h4 {
-  color: var(--caramel);
-  font-size: 1.1rem;
-  margin-bottom: var(--espace-xs);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.carte-contact:first-child a {
-  color: var(--peche);
-  text-decoration: none;
-  transition: color var(--transition);
-}
-
-.carte-contact:first-child a:hover {
-  color: var(--blanc);
-  text-decoration: underline;
-}
-
-.lien-instagram a {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 0.6rem;
-}
-
-.icone-puce {
-  display: inline-flex !important;
   align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: var(--fond-doux);
-  border: 1.5px solid var(--brun);
-  color: var(--brun);
-  flex-shrink: 0;
 }
 
-.icone-puce svg {
-  display: block !important;
-  width: 18px;
-  height: 18px;
-}
-
-/* Carte Droite (Formulaire Blanc) */
-.carte-contact:last-child {
-  flex: 1;
-  background: var(--blanc);
-  border-radius: var(--rayon-m);
-  padding: var(--espace-l);
-  border: 1px solid var(--peche);
-  box-shadow: var(--ombre);
+/* --- Colonne Gauche --- */
+.contact-gauche {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: var(--espace-m);
-}
-
-.entete-form h2 {
-  font-family: var(--police-titre);
-  color: var(--brun);
-  font-size: clamp(2.2rem, 1.8rem + 1.5vw, 3rem);
-  margin-bottom: var(--espace-xs);
-}
-
-.formulaire-contact {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: var(--espace-s);
 }
 
-.champ {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
+.contact-gauche h2 {
+  font-family: var(--police-texte);
+  font-size: clamp(2rem, 1.6rem + 1.5vw, 2.8rem);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--brun);
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
 
-.champ label {
-  font-size: 1rem;
+.contact-gauche .slogan-script {
+  font-family: var(--police-titre);
+  font-size: clamp(2.2rem, 1.8rem + 1.2vw, 3rem);
+  color: var(--brun);
+  margin-bottom: var(--espace-xs);
+}
+
+.contact-gauche .description-contact {
+  font-size: 1.15rem;
+  color: var(--brun);
+  line-height: 1.6;
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+/* Grille des 4 icônes rondes */
+.icones-valeurs {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: var(--espace-m);
+  flex-wrap: wrap;
+}
+
+.item-valeur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cercle-icone {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: rgba(238, 203, 174, 0.45);
+  border: 1px solid var(--peche);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--brun);
+  box-shadow: 0 4px 12px rgba(102, 65, 43, 0.08);
+  transition: transform var(--transition);
+}
+
+.item-valeur:hover .cercle-icone {
+  transform: translateY(-3px);
+  background: var(--peche);
+}
+
+.item-valeur span {
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--brun);
 }
 
-.champ input,
-.champ select,
-.champ textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  background: var(--fond);
+/* --- Colonne Droite (Formulaire) --- */
+.contact-droite {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 2px solid var(--peche);
+  border-radius: var(--rayon-m);
+  padding: var(--espace-l);
+  box-shadow: var(--ombre);
+  text-align: center;
+}
+
+.contact-droite h3 {
+  font-family: var(--police-titre);
+  font-size: clamp(2.5rem, 2rem + 1.5vw, 3.5rem);
   color: var(--brun);
-  border: 1.5px solid var(--peche);
+  font-weight: 400;
+  margin-bottom: var(--espace-m);
+}
+
+.formulaire-elegant {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.grille-champs-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.champ-icone {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.champ-icone .icone-champ {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 1.1rem;
+  color: var(--caramel);
+  pointer-events: none;
+}
+
+.champ-icone input,
+.champ-icone select,
+.champ-icone textarea {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 3rem;
+  background: #fcf6ef;
+  border: 1px solid var(--peche);
   border-radius: var(--rayon-s);
   font-family: inherit;
   font-size: 1.05rem;
-  box-sizing: border-box;
-  transition: border-color var(--transition), background-color var(--transition), box-shadow var(--transition);
+  color: var(--brun);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-.champ textarea {
+.champ-icone textarea {
   min-height: 120px;
   resize: vertical;
+  padding-top: 0.85rem;
 }
 
-.champ input:focus,
-.champ select:focus,
-.champ textarea:focus {
+.champ-icone input:focus,
+.champ-icone select:focus,
+.champ-icone textarea:focus {
   outline: none;
   border-color: var(--orange);
-  background-color: var(--blanc);
-  box-shadow: 0 0 0 3px rgba(203, 110, 58, 0.2);
+  box-shadow: 0 0 0 3px rgba(203, 110, 58, 0.15);
+  background: #ffffff;
+}
+
+.message-fin-form {
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--brun);
+  margin-top: var(--espace-m);
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .conteneur-duo {
+    grid-template-columns: 1fr;
+  }
+  .grille-champs-2 {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -677,7 +736,7 @@ hr {
 
 
 /* =====================================================================
-   7. UTILITAIRES
+   7. UTILITAIRES & BOUTONS FLOTTANTS
    ===================================================================== */
 .centre       { text-align: center; }
 .centre p     { margin-inline: auto; }
@@ -686,6 +745,66 @@ hr {
 .mt-l  { margin-top: var(--espace-l); }
 .mb-0  { margin-bottom: 0; }
 .texte-orange { color: var(--orange); }
+
+/* ---------- Bouton Flottant "Retour en Haut" ---------- */
+.btn-retour-haut {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--blanc);
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: var(--ombre);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+  text-decoration: none;
+}
+
+.btn-retour-haut.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-retour-haut:hover {
+  background: var(--brun);
+  color: var(--blanc);
+  transform: translateY(-3px);
+}
+
+/* ---------- Liens "Section Suivante" dans les cartes ---------- */
+.navigation-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--espace-m);
+  padding-top: var(--espace-s);
+  border-top: 1px dashed var(--peche);
+}
+
+.lien-section-suivante {
+  font-weight: 600;
+  color: var(--orange);
+  font-size: 1.05rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lien-section-suivante:hover {
+  color: var(--brun-fonce);
+  text-decoration: underline;
+}
 
 
 /* =====================================================================
@@ -735,3 +854,145 @@ hr {
     animation-duration: 0.01ms !important;
   }
 }
+
+
+/* ---------- Style Spécifique : Bulle Déroulement de Séance ---------- */
+.bulle-deroulement {
+  background: var(--fond-doux);
+  border: 1px solid var(--peche);
+  border-radius: var(--rayon-m);
+  padding: var(--espace-l);
+  box-shadow: var(--ombre);
+  max-width: 850px;
+  margin-inline: auto;
+}
+
+.bulle-deroulement p {
+  margin-bottom: var(--espace-s);
+  line-height: 1.8;
+}
+
+.bulle-deroulement p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Grille des Bienfaits (Style Carte Élégante avec Icône Circulaire) ---------- */
+.grille-bienfaits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.2rem;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.carte-bienfait {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: var(--blanc);
+  border: 1px solid var(--peche);
+  border-radius: var(--rayon-pill); /* Forme douce étirée */
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 16px rgba(102, 65, 43, 0.06);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.carte-bienfait:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ombre);
+}
+
+.carte-bienfait__cercle {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(238, 203, 174, 0.5);
+  border: 1px solid var(--peche);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.carte-bienfait span {
+  font-family: var(--police-texte);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--brun);
+}
+
+/* ---------- Bloc Informations Importantes (Style Accordéon Doux) ---------- */
+.bloc-infos-importantes {
+  max-width: 850px;
+  margin: var(--espace-l) auto;
+  background: var(--blanc);
+  border: 1px solid var(--peche);
+  border-radius: var(--rayon-m);
+  box-shadow: var(--ombre);
+  overflow: hidden;
+}
+
+.bloc-infos-importantes details summary {
+  padding: 1.2rem 1.5rem;
+  font-family: var(--police-texte);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--brun);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(246, 228, 211, 0.3);
+  transition: background var(--transition);
+}
+
+.bloc-infos-importantes details summary::-webkit-details-marker {
+  display: none;
+}
+
+.bloc-infos-importantes details summary::after {
+  content: "▼";
+  font-size: 0.8rem;
+  color: var(--orange);
+  transition: transform var(--transition);
+}
+
+.bloc-infos-importantes details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.contenu-infos-importantes {
+  padding: 1.5rem;
+  border-top: 1px solid var(--peche);
+  background: var(--blanc);
+}
+
+.liste-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ligne-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--brun);
+}
+
+.ligne-info span.picto {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.ligne-info ul {
+  margin: 0.4rem 0 0 1.2rem;
+  padding: 0;
+}
+
+

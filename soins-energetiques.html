@@ -11,28 +11,30 @@
 </head>
 <body>
 
+  <!-- Navigation -->
   <header class="entete">
     <div class="conteneur entete__interieur">
       <a class="logo" href="index.html" aria-label="Aller à l'accueil">
-        <img src="logo.png" alt="Logo Onystic Lumière" style="height:50px; margin-right:10px;">
+        <img src="images/logo.png" alt="Logo Onystic Lumière">
         <span style="font-family:var(--police-titre);font-size:2.2rem;color:var(--brun);line-height:1">Onystic Lumière</span>
       </a>
       <button class="nav__bouton" aria-expanded="false" aria-controls="menu">☰ Menu</button>
       <nav class="nav" id="menu" aria-label="Menu principal">
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="avancement.html">Avancement</a></li>
           <li class="nav__item--deroulant">
-            <a href="index.html#services" aria-current="page">Services</a>
+            <a href="index.html#prestations" aria-current="page">Services</a>
             <ul class="nav__sous-menu">
               <li><a href="communication-animale.html">Communication animale</a></li>
+              <li><a href="communication-bebe.html">Communication bébés & enfants</a></li>
+              <li><a href="communication-defunts.html">Communication défunts</a></li>
               <li><a href="soins-energetiques.html">Soins énergétiques</a></li>
               <li><a href="cartomancie.html">Cartomancie</a></li>
             </ul>
           </li>
           <li><a href="index.html#apropos">À propos</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
-          <li><a class="btn btn--rdv btn--petit" href="index.html#contact">Prendre rendez-vous</a></li>
+          <li><a class="btn btn--rdv btn--petit" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer">Prendre RDV</a></li>
         </ul>
       </nav>
     </div>
@@ -40,194 +42,250 @@
 
   <main>
     <!-- Hero Section -->
-    <section class="hero hero--page" style="background-image: url('photop.png');">
+    <section class="hero hero--page" style="background-image: url('images/SETete.png');">
       <div class="conteneur">
-        <h1>Soins Énergétiques Holistiques</h1>
-        <p class="slogan">Un espace de douceur pour apaiser le corps, l’esprit et le cœur.</p>
+        <h1>Soins Énergétiques</h1>
+        <p class="slogan">« Retrouver l'harmonie du corps, du cœur et de l'esprit. »</p>
       </div>
     </section>
 
-    <!-- Présentation détaillée -->
+    <!-- 1. Présentation -->
     <section class="section">
       <div class="conteneur duo">
         <div>
-          <h2>Une pause bienveillante & rééquilibrante</h2>
+          <h2>Qu'est-ce qu'un soin énergétique ?</h2>
           <p>
-            Les soins énergétiques holistiques permettent de libérer les charges émotionnelles accumulées, de dissiper les tensions subtiles et de restaurer la libre circulation de l'énergie vitale.
+            Le soin énergétique est un accompagnement doux permettant de réharmoniser les énergies du corps et de l'esprit.
           </p>
           <p>
-            Chaque séance est abordée dans une écoute globale de l'être : qu'il s'agisse d'un humain traversant une période de transition, de stress ou de fatigue, ou d'un animal vivant une baisse de forme, une anxiété ou un changement d'environnement.
+            Au fil de la vie, certaines émotions, expériences ou tensions peuvent venir créer des déséquilibres énergétiques pouvant impacter notre bien-être émotionnel, mental ou physique.
           </p>
           <p>
-            À travers des ressentis intuitifs et des harmonisations ciblées, l'objectif est d'offrir un moment de ressourcement profond pour retrouver légèreté, ancrage et fluidité.
+            Grâce à une approche intuitive et bienveillante, le soin énergétique permet d'accompagner la libération de certaines tensions, de favoriser l'apaisement intérieur et de remettre du mouvement là où l'énergie semble bloquée.
           </p>
-          
-          <div class="encadre mt-m" style="border-left: 4px solid var(--olive); padding-left: 1rem; background: var(--fond-doux); padding-block: 0.8rem; border-radius: var(--rayon-s);">
-            <p style="margin-bottom: 0; font-style: italic; font-size: 0.95rem;">
-              <strong>Note importante :</strong> Les soins énergétiques constituent un accompagnement holistique et complémentaire au bien-être. Ils ne remplacent en aucun cas un diagnostic ou un traitement médical, ni un suivi vétérinaire.
-            </p>
-          </div>
+          <p style="font-style: italic;">
+            Chaque soin est réalisé dans le respect, l'écoute et la douceur, en fonction des besoins de la personne ou de l'animal au moment de la séance.
+          </p>
         </div>
         <div>
-          <img src="soins.png" alt="Soin énergétique holistique Onystic Lumière" style="border-radius:var(--rayon-m); box-shadow:var(--ombre);">
+          <img src="images/SEH.png" alt="Soin énergétique humain Onystic Lumière" style="border-radius: var(--rayon-m); box-shadow: var(--ombre);">
         </div>
       </div>
     </section>
 
-    <!-- Bienfaits & Domaines d'action -->
+
+    <!-- 4. Déroulement d’une séance -->
     <section class="section section--douce">
       <div class="conteneur">
         <div class="section__entete">
-          <h2>Comment un soin peut-il vous accompagner ?</h2>
-          <p>Des actions concrètes pour rééquilibrer les plans émotionnel et énergétique.</p>
+          <h2>Le déroulement d’une séance</h2>
+          <p class="slogan">« Un accompagnement personnalisé pas à pas »</p>
         </div>
-        <div class="grille grille--2">
-          
-          <article class="carte">
-            <div class="carte__contenu">
-              <span class="etiquette">Apaisement</span>
-              <h3>Libération des tensions</h3>
-              <p>Favoriser un relâchement musculaire et mental profond face au stress accumulé, à l'anxiété chronique ou au surmenage au quotidien.</p>
-            </div>
-          </article>
 
-          <article class="carte">
-            <div class="carte__contenu">
-              <span class="etiquette">Harmonie</span>
-              <h3>Harmonisation des Chakras</h3>
-              <p>Réaligner et fluidifier les centres énergétiques pour vous aider à retrouver ancrage, vitalité et stabilité émotionnelle.</p>
-            </div>
-          </article>
-
-          <article class="carte">
-            <div class="carte__contenu">
-              <span class="etiquette">Émotionnel</span>
-              <h3>Traversée des transitions</h3>
-              <p>Accompagner les étapes clés de la vie (changement professionnel, deuil, séparation, période d'examen) avec douceur et confiance.</p>
-            </div>
-          </article>
-
-          <article class="carte">
-            <div class="carte__contenu">
-              <span class="etiquette">Monde Animal</span>
-              <h3>Soutien aux Animaux</h3>
-              <p>Apaiser un compagnon anxieux, peureux, en convalescence ou faire face à l'arrivée d'un nouveau membre dans la famille.</p>
-            </div>
-          </article>
-
+        <div class="bulle-deroulement">
+          <p>Nous prenons tout d’abord contact lors d’un appel téléphonique afin que je puisse vous expliquer ma manière de travailler ainsi que le déroulement du soin énergétique.</p>
+          <p>À la suite de cet échange, le soin se réalise entièrement à distance, dans un cadre calme, respectueux et bienveillant.</p>
+          <p>Lors de la séance, je commence par un réalignement de l’aura ainsi qu’un nettoyage énergétique des chakras afin de réharmoniser les énergies et libérer certains déséquilibres pouvant être présents.</p>
+          <p>Je poursuis ensuite par un soin énergétique physique permettant d’accompagner la libération des tensions, blocages ou charges émotionnelles ressenties par le corps.</p>
+          <p>À l’issue du soin, je vous transmets un PDF récapitulatif dans lequel vous retrouverez les informations, ressentis et éléments perçus durant la séance.</p>
+          <p>Afin d’ancrer davantage le soin dans la matière et de prolonger ses bienfaits dans votre quotidien, je réalise également une synergie d’huiles essentielles entièrement personnalisée, adaptée à vos besoins énergétiques du moment.</p>
+          <p style="font-weight: 600; color: var(--brun-fonce); margin-top: var(--espace-s);">Je vous partage aussi différents outils et conseils à mettre en place au quotidien afin de vous accompagner en douceur dans votre rééquilibrage et votre cheminement personnel.</p>
         </div>
       </div>
     </section>
 
-    <!-- Déroulement d'une séance -->
+    
+    <!-- 2. Ce que le soin énergétique peut apporter -->
+    <section class="section section--douce">
+      <div class="conteneur">
+        <div class="section__entete">
+          <h2>Ce que le soin énergétique peut apporter</h2>
+          <p class="slogan">« Les bienfaits d'un rééquilibrage en douceur »</p>
+        </div>
+
+        <div class="grille-bienfaits">
+          <div class="carte-bienfait">
+            <div class="carte-bienfait__cercle">🌿</div>
+            <span>Apaiser les tensions émotionnelles</span>
+          </div>
+          <div class="carte-bienfait">
+            <div class="carte-bienfait__cercle">✨</div>
+            <span>Retrouver un meilleur équilibre énergétique</span>
+          </div>
+          <div class="carte-bienfait">
+            <div class="carte-bienfait__cercle">🤍</div>
+            <span>Favoriser le lâcher-prise et la détente</span>
+          </div>
+          <div class="carte-bienfait">
+            <div class="carte-bienfait__cercle">🕊️</div>
+            <span>Libérer certaines charges émotionnelles</span>
+          </div>
+          <div class="carte-bienfait">
+            <div class="carte-bienfait__cercle">🌙</div>
+            <span>Se reconnecter à soi-même</span>
+          </div>
+          <div class="carte-bienfait">
+            <div class="carte-bienfait__cercle">🍂</div>
+            <span>Retrouver davantage d’harmonie intérieure</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Information importante concernant les soins animaliers -->
     <section class="section">
       <div class="conteneur">
         <div class="section__entete">
-          <h2>Comment se déroule une séance à distance ?</h2>
+          <h2>Information importante concernant les soins animaliers</h2>
         </div>
-        <div class="grille">
-          
-          <div class="tarif" style="align-items: flex-start; text-align: left;">
-            <span style="font-size: 1.5rem; color: var(--orange); font-weight: 700;">01. Prise de contact</span>
-            <h3 style="margin-top: 0.5rem;">Échange & Intention</h3>
-            <p>Nous définissons ensemble la problématique ou le besoin d'apaisement (par message ou formulaire). Pour l'animal ou l'humain, une photo récente et le prénom suffisent.</p>
-          </div>
-
-          <div class="tarif" style="align-items: flex-start; text-align: left;">
-            <span style="font-size: 1.5rem; color: var(--orange); font-weight: 700;">02. Le Soin</span>
-            <h3 style="margin-top: 0.5rem;">Travail en douceur</h3>
-            <p>À l'heure convenue, le soin est dispensé à distance pendant que vous êtes au calme. Pour un animal, il poursuit ses habitudes sans aucune contrainte.</p>
-          </div>
-
-          <div class="tarif" style="align-items: flex-start; text-align: left;">
-            <span style="font-size: 1.5rem; color: var(--orange); font-weight: 700;">03. Restitution</span>
-            <h3 style="margin-top: 0.5rem;">Bilan & Fiche PDF</h3>
-            <p>Après la séance, un bilan complet vous est partagé en visio ou par téléphone, accompagné d'une fiche récapitulative au format PDF pour conserver une trace.</p>
-          </div>
-
+        <div class="bulle-deroulement" style="background: var(--blanc); border-color: var(--peche);">
+          <p>Dans ma pratique, les soins énergétiques sur les animaux sont réalisés <strong>uniquement à la suite d’une communication animale</strong>.</p>
+          <p>L’humain et l’animal étant profondément liés énergétiquement et émotionnellement, il est essentiel pour moi de comprendre avec qui l’animal travaille au sein de son foyer ainsi que les énergies présentes autour de lui avant d’effectuer un soin.</p>
+          <p>Cette approche me permet d’accompagner votre compagnon avec davantage de justesse, de respect et de compréhension, tout en prenant en considération l’équilibre global entre l’animal et les humains qui partagent sa vie.</p>
+          <p style="font-weight: 600; color: var(--brun-fonce); margin-top: var(--espace-s);">Chaque soin est donc réalisé dans une vision d’accompagnement complète, douce et bienveillante.</p>
         </div>
       </div>
     </section>
 
-    <!-- Tarification réintégrée -->
-    <section class="section section--douce">
+    
+
+    <!-- 5. Informations importantes -->
+    <section class="section" style="padding-top: 0; padding-bottom: var(--espace-l);">
+      <div class="conteneur">
+        <div class="bloc-infos-importantes">
+          <details>
+            <summary>
+              <span>✨ Informations importantes avant une séance</span>
+            </summary>
+            <div class="contenu-infos-importantes">
+              <div class="liste-infos">
+                
+                <div class="ligne-info">
+                  <span class="picto">✨</span>
+                  <div>Le soin énergétique ne remplace en aucun cas un suivi médical ou vétérinaire.</div>
+                </div>
+
+                <div class="ligne-info">
+                  <span class="picto">🌿</span>
+                  <div>Chaque séance est unique et réalisée dans le respect du libre arbitre de chacun.</div>
+                </div>
+
+                <div class="ligne-info">
+                  <span class="picto">🤍</span>
+                  <div>Les soins énergétiques agissent comme un accompagnement complémentaire au bien-être émotionnel et énergétique.</div>
+                </div>
+
+                <div class="ligne-info">
+                  <span class="picto">💻</span>
+                  <div>Les soins se réalisent entièrement à distance.</div>
+                </div>
+
+                <div class="ligne-info">
+                  <span class="picto">📸</span>
+                  <div>Certaines informations ou photos pourront être demandées avant la séance afin de personnaliser l’accompagnement.</div>
+                </div>
+
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarifs / Modalités -->
+    <section class="section">
       <div class="conteneur">
         <div class="section__entete">
-          <h2>Tarifs des Soins Énergétiques</h2>
-          <p>Des formules adaptées aux besoins de chacun.</p>
+          <h2>Tarif & Modalités</h2>
         </div>
-        <div class="grille grille--2">
-
-          <article class="carte tarif">
-            <div class="carte__contenu">
-              <span class="etiquette">Soin Individuel</span>
-              <h3>Soin Énergétique à Distance</h3>
-              <p class="tarif__prix">60 €</p>
-              <span class="tarif__duree">⏱️ Durée : environ 1h</span>
-              <ul style="text-align: left; margin-top: var(--espace-s);">
-                <li>Soin complet pour humain ou animal</li>
-                <li>Nettoyage et rééquilibrage énergétique</li>
-                <li>Temps d'échange post-soin</li>
-                <li>Compte rendu de séance envoyé au format PDF</li>
-              </ul>
-              <a href="index.html#contact" class="btn btn--rdv mt-m">Réserver cette séance</a>
-            </div>
-          </article>
-
-          <article class="carte tarif">
-            <div class="carte__contenu">
-              <span class="etiquette">Formule Duo</span>
-              <h3>Communication & Soin Énergétique</h3>
-              <p class="tarif__prix">155 €</p>
-              <span class="tarif__duree">⏱️ Formule globale et profonde</span>
-              <ul style="text-align: left; margin-top: var(--espace-s);">
-                <li>Communication animale intuitive complète</li>
-                <li>Soin énergétique sur l'animal ET sur le gardien</li>
-                <li>Harmonisation globale du binôme humain/animal</li>
-                <li>Bilan visio + compte rendu écrit PDF complet</li>
-              </ul>
-              <a href="index.html#contact" class="btn btn--rdv mt-m">Réserver le duo complet</a>
-            </div>
-          </article>
-
+        <div class="carte tarif" style="max-width: 500px; margin-inline: auto;">
+          <div class="carte__contenu">
+            <span class="etiquette">À distance</span>
+            <h3>Soin Énergétique Humain</h3>
+            <p class="tarif__prix">60 €</p>
+            <span class="tarif__duree">⏱️ Séance complète individuelle</span>
+            <ul style="text-align: left; margin-top: var(--espace-s);">
+              <li>Réalignement de l'aura & nettoyage des chakras</li>
+              <li>Soin énergétique physique à distance</li>
+              <li>PDF récapitulatif des ressentis</li>
+              <li>Synergie d'huiles essentielles personnalisée</li>
+              <li>Conseils & outils d'ancrage quotidiens</li>
+            </ul>
+            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer" class="btn btn--rdv">Réserver votre soin</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Appel à l'action / Bandeau RDV -->
-    <section class="section section--sombre bandeau-rdv">
+    
+    <!-- Avis Dynamiques (Filtre : Soin Énergétique) -->
+    <section id="avis" class="section section--douce">
       <div class="conteneur">
-        <h2>Envie d’un moment de douceur pour reprendre votre souffle ?</h2>
-        <p>Je vous accueille avec bienveillance pour vous aider à retrouver un équilibre plus léger et serein.</p>
-        <a class="btn btn--rdv" href="index.html#contact">Prendre rendez-vous</a>
+        <div class="section__entete">
+          <h2>Témoignages Soins Énergétiques</h2>
+          <p class="slogan">« Vos retours sont précieux et témoignent des belles transformations vécues. »</p>
+        </div>
+
+        <div class="carrousel-defilement" id="carrouselAvis" data-service="Soin Énergétique">
+          <!-- Chargé via avis.js -->
+        </div>
+
+        <div class="commandes-carrousel">
+          <button class="btn-fleche" id="btnGauche" aria-label="Avis précédent">←</button>
+          <button class="btn-fleche" id="btnDroite" aria-label="Avis suivant">→</button>
+        </div>
+
+        <div class="mt-l centre">
+          <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" class="btn btn--rdv">Laisser un avis</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--sombre bandeau-rdv">
+      <div class="conteneur centre">
+        <h2>« Prendre soin de son énergie, c'est aussi prendre soin de soi. »</h2>
+        <div class="mt-m">
+          <a class="btn btn--rdv" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ub2o0OGV1jidB3kpjFoNTjhQUkhclKqII0aHMLhfxmiOOGWksGh_dpcXoUpX2D3y9U19F1DSL?gv=true" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="pied">
     <div class="conteneur">
+      <div class="centre mb-m">
+        <p class="slogan" style="color: var(--peche); font-size: 1.6rem;">« Nourrir le lien si précieux qui nous unit au vivant. »</p>
+      </div>
       <div class="pied__colonnes">
         <div>
           <h3>Onystic Lumière</h3>
-          <p>Un accompagnement doux pour le cœur et l’âme.</p>
+          <p>Accompagnements humains & animaux.<br>Consultations à distance sur rendez-vous.</p>
+          <p><a href="mailto:onysticlumiere@gmail.com">onysticlumiere@gmail.com</a></p>
         </div>
         <div>
           <h3>Services</h3>
           <ul>
             <li><a href="communication-animale.html">Communication animale</a></li>
+            <li><a href="communication-bebe.html">Communication bébés & enfants</a></li>
+            <li><a href="communication-defunts.html">Communication défunts</a></li>
             <li><a href="soins-energetiques.html">Soins énergétiques</a></li>
             <li><a href="cartomancie.html">Cartomancie</a></li>
           </ul>
         </div>
         <div>
-          <h3>Contact</h3>
+          <h3>Informations</h3>
           <ul>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#apropos">À propos</a></li>
             <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="mentions-legales.html">Informations Légales & CGV</a></li>
           </ul>
         </div>
       </div>
-      <p class="pied__legal mb-0" style="max-width:none">© Onystic Lumière – Site créé avec douceur et bienveillance</p>
+      <div class="pied__legal">
+        <p>© Onystic Lumière – Tous droits réservés | Site créé avec douceur et bienveillance</p>
+      </div>
     </div>
   </footer>
 
@@ -239,5 +297,6 @@
       bouton.setAttribute('aria-expanded', ouvert);
     });
   </script>
+  <script src="avis.js"></script>
 </body>
 </html>
